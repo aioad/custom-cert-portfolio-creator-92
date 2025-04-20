@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { GitHub, Linkedin, Mail, Code } from "lucide-react";
+import { Github, Linkedin, Mail, Code } from "lucide-react";
 
 const Contact = () => {
   const contactLinks = [
@@ -21,7 +21,7 @@ const Contact = () => {
     {
       platform: "GitHub",
       link: "https://github.com/meghathakur28/",
-      icon: <GitHub className="h-5 w-5" />,
+      icon: <Github className="h-5 w-5" />,
       username: "meghathakur28",
       color: "bg-gray-500/20 text-gray-400 border-gray-500/30"
     },
