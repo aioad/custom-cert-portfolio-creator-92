@@ -6,6 +6,7 @@ const Projects = () => {
   const projectsData = [
     {
       title: "Amazon Prime Video Dashboard",
+      image: "/lovable-uploads/aef11339-0f42-4c2d-8748-df906ff01960.png",
       description: "Designed and developed an interactive Tableau dashboard to analyze and visualize data from the Amazon Prime Video dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
@@ -17,6 +18,7 @@ const Projects = () => {
     },
     {
       title: "Sudoku Solver Visualizer",
+      image: "/lovable-uploads/6c9c3a92-78a4-47cf-8c27-2d33e08d0f30.png",
       description: "Engineered a backtracking algorithm to efficiently solve Sudoku puzzles, ensuring optimal performance and accuracy across a wide range of puzzle difficulties.",
       points: [
         "Developed interactive GUI with Java Swing to enhance user solving experience.",
@@ -28,6 +30,7 @@ const Projects = () => {
     },
     {
       title: "SuperStore Sales Dashboard",
+      image: "/lovable-uploads/57bf7c72-9ea9-4bf6-888c-93f2494a48e5.png",
       description: "Designed and developed an interactive dashboard to analyze and visualize data from the SuperStore dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
@@ -48,6 +51,11 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
             <Card key={index} className="bg-[#2A2F3C] border-purple-500/30 overflow-hidden h-full flex flex-col hover:border-purple-500 transition-all duration-300">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-48 object-cover"
+              />
               <CardContent className="p-6 flex flex-col h-full">
                 <h3 className="text-xl font-bold mb-3 text-purple-300">{project.title}</h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
