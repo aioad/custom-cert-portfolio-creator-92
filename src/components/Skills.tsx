@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 
 const Skills = () => {
@@ -20,7 +19,7 @@ const Skills = () => {
     { name: "Figma", icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
     { name: "Visual Studio", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/640px-Visual_Studio_Code_1.35_icon.svg.png" },
     { name: "Android Studio", icon: "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png" },
-    { name: "Eclipse", icon: "https://www.eclipse.org/artwork/images/eclipse_foundation_logo.jpg" }
+    { name: "Eclipse", icon: "https://www.eclipse.org/downloads/assets/public/images/logo-eclipse.png" }
   ];
 
   return (

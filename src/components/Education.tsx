@@ -9,21 +9,24 @@ const Education = () => {
       degree: "Bachelor of Technology - Computer Science and Engineering",
       period: "Since August 2022",
       location: "Phagwara, Punjab",
-      grade: "CGPA: 8.16"
+      grade: "CGPA: 8.16",
+      image: "/lovable-uploads/ca3db0a8-2bb6-440a-b8a5-fac83fbedd41.png"
     },
     {
       institution: "Little Angels Sr. Sec. School",
       degree: "Intermediate",
       period: "April 2021 - March 2022",
       location: "Barsar, Himachal Pradesh",
-      grade: "Percentage: 88%"
+      grade: "Percentage: 88%",
+      image: "/lovable-uploads/ebca5828-e574-49c7-9730-6b8f7ed0d397.png"
     },
     {
       institution: "Little Angels Sr. Sec. School",
       degree: "Matriculation",
       period: "April 2019 - March 2020",
       location: "Barsar, Himachal Pradesh",
-      grade: "Percentage: 91.4%"
+      grade: "Percentage: 91.4%",
+      image: "/lovable-uploads/ebca5828-e574-49c7-9730-6b8f7ed0d397.png"
     }
   ];
 
@@ -54,6 +57,13 @@ const Education = () => {
               <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} ml-12 md:ml-0`}>
                 <Card className="bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300">
                   <CardContent className="p-6">
+                    <div className="mb-4 w-full h-48 overflow-hidden rounded-lg">
+                      <img 
+                        src={edu.image} 
+                        alt={edu.institution}
+                        className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
                     <h3 className="text-xl font-bold text-purple-300">{edu.institution}</h3>
                     <p className="text-white mt-1">{edu.degree}</p>
                     <p className="text-gray-300 text-sm mt-2">{edu.period}</p>

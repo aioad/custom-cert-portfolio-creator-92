@@ -16,10 +16,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-1/2 space-y-6">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
             Megha Thakur
           </h1>
-          <p className="text-xl text-gray-300">Student, Coding and Data Analyst</p>
+          <p className="text-xl text-gray-300">3rd year B.tech student</p>
           <div className="flex gap-4">
             <Button
               variant="outline"
@@ -41,7 +41,7 @@ const Index = () => {
           <img
             src="/lovable-uploads/1fd2e7b5-cc8e-4252-bf2b-b01d81e0c90f.png"
             alt="Megha Thakur"
-            className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-purple-500"
+            className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-purple-500 shadow-lg shadow-purple-500/50"
           />
         </div>
       </section>
