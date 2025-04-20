@@ -6,7 +6,7 @@ const Projects = () => {
   const projectsData = [
     {
       title: "Amazon Prime Video Dashboard",
-      image: "/lovable-uploads/aef11339-0f42-4c2d-8748-df906ff01960.png",
+      image: "/lovable-uploads/e838fd84-3836-4ce0-8f7b-bacff2c3bbae.png",
       description: "Designed and developed an interactive Tableau dashboard to analyze and visualize data from the Amazon Prime Video dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
@@ -18,7 +18,7 @@ const Projects = () => {
     },
     {
       title: "Sudoku Solver Visualizer",
-      image: "/lovable-uploads/6c9c3a92-78a4-47cf-8c27-2d33e08d0f30.png",
+      image: "/lovable-uploads/62572a5a-da64-4a4f-a5f6-289dd3199695.png",
       description: "Engineered a backtracking algorithm to efficiently solve Sudoku puzzles, ensuring optimal performance and accuracy across a wide range of puzzle difficulties.",
       points: [
         "Developed interactive GUI with Java Swing to enhance user solving experience.",
@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       title: "SuperStore Sales Dashboard",
-      image: "/lovable-uploads/57bf7c72-9ea9-4bf6-888c-93f2494a48e5.png",
+      image: "/lovable-uploads/b79f62c2-257b-462a-a767-9645f70811e8.png",
       description: "Designed and developed an interactive dashboard to analyze and visualize data from the SuperStore dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",

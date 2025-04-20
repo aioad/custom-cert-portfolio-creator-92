@@ -3,24 +3,24 @@ import { Card } from "@/components/ui/card";
 
 const Skills = () => {
   const languages = [
-    { name: "Java", icon: "/lovable-uploads/e2f3be99-0f53-44a9-be45-42e2e4f6f46a.png" },
-    { name: "C", icon: "/lovable-uploads/98f22f69-dd69-447e-8c87-44e137190248.png" },
-    { name: "C++", icon: "/lovable-uploads/96cec89d-2666-4f67-b6e8-c9732e40c172.png" },
-    { name: "R", icon: "/lovable-uploads/fb795a3f-7edd-4a66-8bab-cf44b4c9d24e.png" },
-    { name: "Python", icon: "/lovable-uploads/c4d47e4d-c57f-4d6a-9cb2-df74d35de94d.png" }
+    { name: "Java", icon: "/lovable-uploads/b79f62c2-257b-462a-a767-9645f70811e8.png" },
+    { name: "C", icon: "/lovable-uploads/dc02845d-c76e-41ac-af33-6415e6ad0e0f.png" },
+    { name: "C++", icon: "/lovable-uploads/5b8fc484-6832-407f-ace4-78fb7f32becc.png" },
+    { name: "R", icon: "/lovable-uploads/f4db687f-fa1a-4a1a-99f7-bb9e5f8c08e0.png" },
+    { name: "Python", icon: "/lovable-uploads/62572a5a-da64-4a4f-a5f6-289dd3199695.png" }
   ];
 
   const tools = [
-    { name: "Power BI", icon: "/lovable-uploads/e2f3be99-0f53-44a9-be45-42e2e4f6f46a.png" },
-    { name: "Ms-Excel", icon: "/lovable-uploads/98f22f69-dd69-447e-8c87-44e137190248.png" },
-    { name: "Tableau", icon: "/lovable-uploads/96cec89d-2666-4f67-b6e8-c9732e40c172.png" },
-    { name: "MySQL", icon: "/lovable-uploads/fb795a3f-7edd-4a66-8bab-cf44b4c9d24e.png" },
-    { name: "Hadoop", icon: "/lovable-uploads/c4d47e4d-c57f-4d6a-9cb2-df74d35de94d.png" },
-    { name: "Hbase", icon: "/lovable-uploads/e2f3be99-0f53-44a9-be45-42e2e4f6f46a.png" },
-    { name: "Figma", icon: "/lovable-uploads/98f22f69-dd69-447e-8c87-44e137190248.png" },
-    { name: "Visual Studio", icon: "/lovable-uploads/96cec89d-2666-4f67-b6e8-c9732e40c172.png" },
-    { name: "Android Studio", icon: "/lovable-uploads/fb795a3f-7edd-4a66-8bab-cf44b4c9d24e.png" },
-    { name: "Eclipse", icon: "/lovable-uploads/c4d47e4d-c57f-4d6a-9cb2-df74d35de94d.png" }
+    { name: "Power BI", icon: "/lovable-uploads/f1024025-e3b7-451c-929e-55361565e08c.png" },
+    { name: "Ms-Excel", icon: "/lovable-uploads/79f5ca70-aa0e-49aa-9059-70548d201ef7.png" },
+    { name: "Tableau", icon: "/lovable-uploads/e838fd84-3836-4ce0-8f7b-bacff2c3bbae.png" },
+    { name: "MySQL", icon: "/lovable-uploads/b79f62c2-257b-462a-a767-9645f70811e8.png" },
+    { name: "Hadoop", icon: "/lovable-uploads/dc02845d-c76e-41ac-af33-6415e6ad0e0f.png" },
+    { name: "Hbase", icon: "/lovable-uploads/5b8fc484-6832-407f-ace4-78fb7f32becc.png" },
+    { name: "Figma", icon: "/lovable-uploads/f4db687f-fa1a-4a1a-99f7-bb9e5f8c08e0.png" },
+    { name: "Visual Studio", icon: "/lovable-uploads/62572a5a-da64-4a4f-a5f6-289dd3199695.png" },
+    { name: "Android Studio", icon: "/lovable-uploads/f1024025-e3b7-451c-929e-55361565e08c.png" },
+    { name: "Eclipse", icon: "/lovable-uploads/79f5ca70-aa0e-49aa-9059-70548d201ef7.png" }
   ];
 
   return (
