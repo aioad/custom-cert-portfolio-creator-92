@@ -19,21 +19,23 @@ const Index = () => {
           <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
             Megha Thakur
           </h1>
-          <p className="text-xl text-gray-300">3rd year B.tech student</p>
+          <p className="text-xl text-gray-300">
+            An aspiring developer with a strong command of Java and a deep interest in problem-solving and data visualization. I enjoy turning raw data into meaningful stories through tools like Tableau, Power BI, and MS Excel. With hands-on experience in building projects such as interactive dashboards, Java-based applications, and solving 250+ DSA problems on platforms like LeetCode and GeeksforGeeks, I thrive on analytical thinking and continuous learning. Let's connect!
+          </p>
           <div className="flex gap-4">
             <Button
               variant="outline"
               className="border-purple-500 hover:bg-purple-500"
               onClick={() => window.open("https://drive.google.com/file/d/19NEay0YFJpEw5cUe2zPgMH8ZYTqiGim4/view?usp=sharing", "_blank")}
             >
-              <FileText className="mr-2" /> Resume
+              <FileText className="mr-2" /> View Resume
             </Button>
             <Button
               variant="outline"
               className="border-purple-500 hover:bg-purple-500"
               onClick={() => window.open("https://drive.google.com/file/d/1jtxxKz3xn6SFYe948tnfM3BmX1RvRqWq/view?usp=sharing", "_blank")}
             >
-              <Video className="mr-2" /> Video CV
+              <Video className="mr-2" /> View Video CV
             </Button>
           </div>
         </div>
