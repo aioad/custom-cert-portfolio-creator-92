@@ -8,6 +8,7 @@ import Certificates from "@/components/Certificates";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import { FileText, Video } from "lucide-react";
+import VideoCV from "@/components/VideoCV";
 
 const Index = () => {
   return (
@@ -49,6 +50,7 @@ const Index = () => {
       <Skills />
       <Projects />
       <Certificates />
+      <VideoCV />
       <Education />
       <Contact />
     </div>
