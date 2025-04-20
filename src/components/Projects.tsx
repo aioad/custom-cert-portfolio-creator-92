@@ -6,7 +6,7 @@ const Projects = () => {
   const projectsData = [
     {
       title: "Amazon Prime Video Dashboard",
-      image: "/lovable-uploads/e838fd84-3836-4ce0-8f7b-bacff2c3bbae.png",
+      image: "/lovable-uploads/92c7d245-7eea-4d86-8812-68c549b68516.png",
       description: "Designed and developed an interactive Tableau dashboard to analyze and visualize data from the Amazon Prime Video dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
@@ -18,7 +18,7 @@ const Projects = () => {
     },
     {
       title: "Sudoku Solver Visualizer",
-      image: "/lovable-uploads/62572a5a-da64-4a4f-a5f6-289dd3199695.png",
+      image: "/lovable-uploads/7053e5f5-d14c-4926-8333-f93a8d0a570c.png",
       description: "Engineered a backtracking algorithm to efficiently solve Sudoku puzzles, ensuring optimal performance and accuracy across a wide range of puzzle difficulties.",
       points: [
         "Developed interactive GUI with Java Swing to enhance user solving experience.",
@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       title: "SuperStore Sales Dashboard",
-      image: "/lovable-uploads/b79f62c2-257b-462a-a767-9645f70811e8.png",
+      image: "/lovable-uploads/1c911df6-335f-493c-b2b1-2a8fddf877a6.png",
       description: "Designed and developed an interactive dashboard to analyze and visualize data from the SuperStore dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
@@ -51,11 +51,13 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
             <Card key={index} className="bg-[#2A2F3C] border-purple-500/30 overflow-hidden h-full flex flex-col hover:border-purple-500 transition-all duration-300">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-48 object-cover"
-              />
+              <div className="w-full h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <CardContent className="p-6 flex flex-col h-full">
                 <h3 className="text-xl font-bold mb-3 text-purple-300">{project.title}</h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
