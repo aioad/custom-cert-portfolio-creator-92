@@ -55,9 +55,16 @@ const Education = () => {
               
               {/* Content */}
               <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} ml-12 md:ml-0`}>
-                <Card className="bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="mb-4 w-full h-48 overflow-hidden rounded-lg">
+                <Card className="bg-[#2A2F3C]/90 border-purple-500/30 hover:border-purple-500 transition-all duration-300 relative overflow-hidden group">
+                  <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    <img 
+                      src={`/lovable-uploads/photo-${index + 1}.jpg`} 
+                      alt="background" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-6 relative z-10">
+                    <div className="mb-4 w-full h-40 overflow-hidden rounded-lg transform hover:rotate-2 transition-transform duration-300">
                       <img 
                         src={edu.image} 
                         alt={edu.institution}
