@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { School } from "lucide-react";
 
@@ -11,6 +10,19 @@ const Education = () => {
       location: "Phagwara, Punjab",
       grade: "CGPA: 8.16",
       image: "/lovable-uploads/ca3db0a8-2bb6-440a-b8a5-fac83fbedd41.png"
+    },
+    {
+      institution: "SPRUCE (powered by Hitbullseye)",
+      degree: "Data Structures and Algorithms Training",
+      period: "June 2024 - July 2024",
+      location: "Lovely Professional University",
+      grade: "84 Hours Training",
+      image: "/lovable-uploads/b1a80735-8174-4426-b1e3-aa6682c053f5.png",
+      description: [
+        "Studied fundamental and advanced concepts of data structures, including arrays, linked lists, stacks, queues, trees, graphs, and hash tables.",
+        "Learned algorithm design and analysis, focusing on sorting, searching, dynamic programming, and graph algorithms.",
+        "Applied theoretical knowledge in practical scenarios through hands-on projects in Java."
+      ]
     },
     {
       institution: "Little Angels Sr. Sec. School",
@@ -81,6 +93,13 @@ const Education = () => {
                     <h3 className="text-xl font-bold text-purple-300 mb-2">{edu.institution}</h3>
                     <p className="text-white/90 font-medium mb-1">{edu.degree}</p>
                     <p className="text-gray-400 text-sm mb-2">{edu.period}</p>
+                    {edu.description && (
+                      <ul className="list-disc list-inside text-sm text-gray-400 mb-3 space-y-1">
+                        {edu.description.map((desc, i) => (
+                          <li key={i} className="leading-tight">{desc}</li>
+                        ))}
+                      </ul>
+                    )}
                     <div className="flex justify-between items-center mt-3 pt-3 border-t border-purple-500/20">
                       <span className="text-sm text-gray-400">{edu.location}</span>
                       <span className="text-sm font-medium text-purple-400">{edu.grade}</span>
