@@ -6,7 +6,7 @@ const Projects = () => {
   const projectsData = [
     {
       title: "Amazon Prime Video Dashboard",
-      image: "/lovable-uploads/92c7d245-7eea-4d86-8812-68c549b68516.png",
+      image: "/lovable-uploads/1c911df6-335f-493c-b2b1-2a8fddf877a6.png",
       description: "Designed and developed an interactive Tableau dashboard to analyze and visualize data from the Amazon Prime Video dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       title: "SuperStore Sales Dashboard",
-      image: "/lovable-uploads/1c911df6-335f-493c-b2b1-2a8fddf877a6.png",
+      image: "/lovable-uploads/92c7d245-7eea-4d86-8812-68c549b68516.png",
       description: "Designed and developed an interactive dashboard to analyze and visualize data from the SuperStore dataset.",
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
