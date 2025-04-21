@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Video, FileText } from "lucide-react";
+import { Video, FileText, RotateCw } from "lucide-react";
 
 const VIDEO_SRC =
   "https://drive.google.com/file/d/1jtxxKz3xn6SFYe948tnfM3BmX1RvRqWq/preview";
@@ -17,66 +17,70 @@ const VideoCV = () => {
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Video CV
         </h2>
-        <div className="max-w-2xl mx-auto perspective-[1200px]">
+        <div className="max-w-2xl mx-auto" style={{ perspective: "1200px" }}>
           <div
-            className={`relative w-full aspect-video transition-transform duration-700 [transform-style:preserve-3d] ${
-              flipped ? "rotate-y-180" : ""
-            }`}
+            className={`relative w-full transition-transform duration-700`}
             style={{
-              minHeight: 340,
-              cursor: "pointer",
+              minHeight: 415,
+              transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+              transformStyle: "preserve-3d",
             }}
-            onClick={() => setFlipped((f) => !f)}
           >
             {/* FRONT: Video CV */}
             <Card
-              className="absolute inset-0 w-full h-full bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 overflow-hidden transition-all duration-300 flex items-center justify-center"
+              className="absolute inset-0 w-full h-full bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 overflow-hidden transition-all duration-300"
               style={{
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
               }}
+              onClick={() => setFlipped(true)}
             >
-              <div className="group flex flex-col h-full w-full items-center justify-center gap-4">
-                <span>
-                  <Video className="w-20 h-20 text-purple-400 animate-pulse" />
-                </span>
-                <span className="text-xl text-purple-100 font-medium">
-                  Click to view Resume PDF
-                </span>
-                <span className="text-gray-400 text-base">
-                  (Watch Video CV)
-                </span>
+              <div className="relative h-full">
+                <iframe
+                  src={VIDEO_SRC}
+                  title="Video CV"
+                  className="w-full h-full min-h-[340px]"
+                  allow="autoplay"
+                  style={{ border: "none" }}
+                ></iframe>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1A1F2C] to-transparent p-4 flex items-center justify-center">
+                  <button className="flex items-center gap-2 text-purple-300 hover:text-purple-400 transition-colors">
+                    <RotateCw className="w-5 h-5" />
+                    <span>Flip to view Resume</span>
+                  </button>
+                </div>
               </div>
             </Card>
+            
             {/* BACK: Resume PDF */}
             <Card
-              className="absolute inset-0 w-full h-full bg-[#2A2F3C] border-purple-500/40 overflow-hidden flex flex-col"
+              className="absolute inset-0 w-full h-full bg-[#2A2F3C] border-purple-500/40 overflow-hidden"
               style={{
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
                 transform: "rotateY(180deg)",
               }}
+              onClick={() => setFlipped(false)}
             >
-              <div className="flex-1 overflow-hidden rounded-b-lg relative">
+              <div className="relative h-full">
                 <iframe
                   src={RESUME_PDF}
                   title="Resume PDF"
                   className="w-full h-full min-h-[340px]"
                   allow="autoplay"
                   style={{ border: "none" }}
-                />
-              </div>
-              <div className="flex flex-col items-center py-2">
-                <FileText className="w-7 h-7 text-purple-400 mb-1 animate-pulse" />
-                <span className="text-sm text-gray-300">
-                  Click to return to Video CV
-                </span>
-                <span className="text-xs text-gray-400"> (Scroll to read Resume) </span>
+                ></iframe>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1A1F2C] to-transparent p-4 flex items-center justify-center">
+                  <button className="flex items-center gap-2 text-purple-300 hover:text-purple-400 transition-colors">
+                    <RotateCw className="w-5 h-5" />
+                    <span>Flip to view Video</span>
+                  </button>
+                </div>
               </div>
             </Card>
           </div>
           <p className="text-center text-purple-300 mt-6 text-sm italic">
-            Tap the card to toggle: Video CV &lt;&rarr;&gt; Resume PDF
+            Click on the card to toggle between Video CV and Resume PDF
           </p>
         </div>
       </div>
@@ -85,4 +89,3 @@ const VideoCV = () => {
 };
 
 export default VideoCV;
-
