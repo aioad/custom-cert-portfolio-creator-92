@@ -5,8 +5,9 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
-import EducationTraining from "@/components/EducationTraining";
+import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import Training from "@/components/Training";
 import { FileText, Video, User, Briefcase, School, Mail, Linkedin } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
 import React from "react";
@@ -108,11 +109,13 @@ const Index = () => {
       <div id="projects"><Projects /></div>
       <Certificates />
       <VideoCV />
-      {/* Combined Education and Training section */}
-      <div id="education"><EducationTraining /></div>
+      {/* Place training before education */}
+      <div id="training"><Training /></div>
+      <div id="education"><Education /></div>
       <div id="contact"><Contact /></div>
     </div>
   );
 };
 
 export default Index;
+
