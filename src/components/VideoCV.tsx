@@ -54,7 +54,7 @@ const VideoCV = () => {
                 </div>
               </div>
             </Card>
-            
+
             {/* BACK: Resume PDF */}
             <Card
               className="absolute inset-0 w-full h-full bg-[#2A2F3C] border-purple-500/40 overflow-hidden transition-all duration-300 cursor-pointer"
@@ -88,9 +88,6 @@ const VideoCV = () => {
               </div>
             </Card>
           </div>
-          <p className="text-center text-purple-300 mt-6 text-sm italic">
-            Click on the card to toggle between Video CV and Resume PDF
-          </p>
         </div>
       </div>
     </section>
@@ -98,3 +95,4 @@ const VideoCV = () => {
 };
 
 export default VideoCV;
+
