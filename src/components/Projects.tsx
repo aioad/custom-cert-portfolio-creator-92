@@ -31,11 +31,11 @@ const Projects = () => {
     {
       title: "SuperStore Sales Dashboard",
       image: "/lovable-uploads/92c7d245-7eea-4d86-8812-68c549b68516.png",
-      description: "Designed and developed an interactive dashboard to analyze and visualize data from the SuperStore dataset.",
+      // Removed the description per your request
       points: [
-        "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
-        "Displayed global content trends by genre, rating, country, and content type.",
-        "Found 80.82% were movies, 24.7% were drama, and 39% from the U.S."
+        "Implemented sales trends, profit margins, and region-wise performance visualizations.",
+        "Enabled dynamic filtering and drill-downs to enhance data exploration and clarity.",
+        "Delivered 12% profit drop insights, 8% product gains, and 40% faster reporting."
       ],
       githubLink: "https://github.com/meghathakur28/Superstore-report-on-PowerBI",
       technologies: ["Power BI", "Data Visualization", "Data Analysis"]
@@ -60,7 +60,10 @@ const Projects = () => {
               </div>
               <CardContent className="p-6 flex flex-col h-full">
                 <h3 className="text-xl font-bold mb-3 text-purple-300">{project.title}</h3>
-                <p className="text-gray-300 mb-4">{project.description}</p>
+                {/* Only show description if it exists */}
+                {project.description && (
+                  <p className="text-gray-300 mb-4">{project.description}</p>
+                )}
                 <ul className="list-disc pl-5 mb-4 text-gray-300 text-sm space-y-1">
                   {project.points.map((point, i) => (
                     <li key={i}>{point}</li>
@@ -94,3 +97,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
