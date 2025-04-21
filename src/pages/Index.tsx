@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import About from "@/components/About";
@@ -7,6 +6,7 @@ import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import Training from "@/components/Training";
 import { FileText, Video } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
 
@@ -53,6 +53,7 @@ const Index = () => {
       <Projects />
       <Certificates />
       <VideoCV />
+      <Training />
       <Education />
       <Contact />
     </div>
