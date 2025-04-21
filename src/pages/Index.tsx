@@ -59,14 +59,14 @@ const Index = () => {
             <div className="flex gap-4">
               <Button
                 variant="outline"
-                className="border-purple-500 hover:bg-purple-500 flex items-center"
+                className="border-purple-500 bg-transparent text-purple-300 hover:bg-purple-500 flex items-center"
                 onClick={() => window.open("https://drive.google.com/file/d/19NEay0YFJpEw5cUe2zPgMH8ZYTqiGim4/view?usp=sharing", "_blank")}
               >
                 <FileText className="mr-2" /> View Resume
               </Button>
               <Button
                 variant="outline"
-                className="border-purple-500 hover:bg-purple-500 flex items-center"
+                className="border-purple-500 bg-transparent text-purple-300 hover:bg-purple-500 flex items-center"
                 onClick={() => window.open("https://drive.google.com/file/d/1jtxxKz3xn6SFYe948tnfM3BmX1RvRqWq/view?usp=sharing", "_blank")}
               >
                 <Video className="mr-2" /> View Video CV
