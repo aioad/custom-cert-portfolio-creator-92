@@ -8,7 +8,7 @@ import Certificates from "@/components/Certificates";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Training from "@/components/Training";
-import { FileText, Video, User, Briefcase, School, Mail } from "lucide-react";
+import { FileText, Video, User, Briefcase, School, Mail, Linkedin } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
 import React from "react";
 
@@ -52,22 +52,44 @@ const Index = () => {
           <p className="text-xl text-gray-300">
             An aspiring developer with a strong command of Java and a deep interest in problem-solving and data visualization. I enjoy turning raw data into meaningful stories through tools like Tableau, Power BI, and MS Excel. With hands-on experience in building projects such as interactive dashboards, Java-based applications, and solving 250+ DSA problems on platforms like LeetCode and GeeksforGeeks, I thrive on analytical thinking and continuous learning. Let's connect!
           </p>
-          {/* Always-visible resume/video buttons */}
-          <div className="flex gap-4">
-            <Button
-              variant="outline"
-              className="border-purple-500 hover:bg-purple-500"
-              onClick={() => window.open("https://drive.google.com/file/d/19NEay0YFJpEw5cUe2zPgMH8ZYTqiGim4/view?usp=sharing", "_blank")}
-            >
-              <FileText className="mr-2" /> View Resume
-            </Button>
-            <Button
-              variant="outline"
-              className="border-purple-500 hover:bg-purple-500"
-              onClick={() => window.open("https://drive.google.com/file/d/1jtxxKz3xn6SFYe948tnfM3BmX1RvRqWq/view?usp=sharing", "_blank")}
-            >
-              <Video className="mr-2" /> View Video CV
-            </Button>
+          {/* Always-visible resume/video buttons and social icons */}
+          <div className="flex items-center gap-6">
+            <div className="flex gap-4">
+              <Button
+                variant="outline"
+                className="border-purple-500 hover:bg-purple-500 flex items-center"
+                onClick={() => window.open("https://drive.google.com/file/d/19NEay0YFJpEw5cUe2zPgMH8ZYTqiGim4/view?usp=sharing", "_blank")}
+              >
+                <FileText className="mr-2" /> View Resume
+              </Button>
+              <Button
+                variant="outline"
+                className="border-purple-500 hover:bg-purple-500 flex items-center"
+                onClick={() => window.open("https://drive.google.com/file/d/1jtxxKz3xn6SFYe948tnfM3BmX1RvRqWq/view?usp=sharing", "_blank")}
+              >
+                <Video className="mr-2" /> View Video CV
+              </Button>
+            </div>
+            <div className="flex space-x-6 text-purple-400">
+              <a 
+                href="mailto:meghathakur292@gmail.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Email"
+                className="hover:text-purple-600 transition"
+              >
+                <Mail className="w-7 h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/meghathakur28"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-purple-600 transition"
+              >
+                <Linkedin className="w-7 h-7" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="lg:w-1/2">
@@ -94,3 +116,4 @@ const Index = () => {
 };
 
 export default Index;
+
