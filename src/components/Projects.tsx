@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "Amazon Prime Video Dashboard",
       image: "/lovable-uploads/1c911df6-335f-493c-b2b1-2a8fddf877a6.png",
-      description: "Designed and developed an interactive Tableau dashboard to analyze and visualize data from the Amazon Prime Video dataset.",
+      // Removed description as per user's request
       points: [
         "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
         "Displayed global content trends by genre, rating, country, and content type.",
@@ -19,7 +19,7 @@ const Projects = () => {
     {
       title: "Sudoku Solver Visualizer",
       image: "/lovable-uploads/7053e5f5-d14c-4926-8333-f93a8d0a570c.png",
-      description: "Engineered a backtracking algorithm to efficiently solve Sudoku puzzles, ensuring optimal performance and accuracy across a wide range of puzzle difficulties.",
+      // Removed description as per user's request
       points: [
         "Developed interactive GUI with Java Swing to enhance user solving experience.",
         "Optimized algorithm solves 9x9 puzzles in under 0.1 seconds efficiently.",

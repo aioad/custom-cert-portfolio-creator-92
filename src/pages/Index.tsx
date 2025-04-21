@@ -49,10 +49,12 @@ const Index = () => {
           <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
             Megha Thakur
           </h1>
+          {/* Replaced the big paragraph with the new two-line paragraph */}
           <p className="text-xl text-gray-300">
-            Turning complex problems into elegant solutions with Java and data. Passionate about code, curious about data, and always building something impactful.
+            Turning complex problems into elegant solutions with Java and data.<br />
+            Passionate about code, curious about data, and always building something impactful.
           </p>
-          {/* Always-visible resume/video buttons and social icons */}
+          {/* Always-visible resume/video buttons and social icons, with LinkedIn and email next to them */}
           <div className="flex items-center gap-6">
             <div className="flex gap-4">
               <Button
