@@ -50,7 +50,7 @@ const Index = () => {
             Megha Thakur
           </h1>
           <p className="text-xl text-gray-300">
-            An aspiring developer with a strong command of Java and a deep interest in problem-solving and data visualization. I enjoy turning raw data into meaningful stories through tools like Tableau, Power BI, and MS Excel. With hands-on experience in building projects such as interactive dashboards, Java-based applications, and solving 250+ DSA problems on platforms like LeetCode and GeeksforGeeks, I thrive on analytical thinking and continuous learning. Let's connect!
+            Turning complex problems into elegant solutions with Java and data. Passionate about code, curious about data, and always building something impactful.
           </p>
           {/* Always-visible resume/video buttons and social icons */}
           <div className="flex items-center gap-6">
