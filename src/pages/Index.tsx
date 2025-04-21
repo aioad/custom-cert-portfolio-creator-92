@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import About from "@/components/About";
@@ -7,12 +8,41 @@ import Certificates from "@/components/Certificates";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Training from "@/components/Training";
-import { FileText, Video } from "lucide-react";
+import { FileText, Video, User, Briefcase, School, Mail } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
+import React from "react";
+
+// Smooth scroll helper
+const scrollToId = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#1A1F2C] text-white">
+      {/* Navigation shortcut bar */}
+      <nav className="flex justify-center gap-8 py-4 bg-[#191B23] border-b border-purple-900/30 sticky top-0 z-50">
+        <button onClick={() => scrollToId("about")} className="flex flex-col items-center group focus:outline-none">
+          <User className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">About</span>
+        </button>
+        <button onClick={() => scrollToId("projects")} className="flex flex-col items-center group focus:outline-none">
+          <Briefcase className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">Projects</span>
+        </button>
+        <button onClick={() => scrollToId("education")} className="flex flex-col items-center group focus:outline-none">
+          <School className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">Education</span>
+        </button>
+        <button onClick={() => scrollToId("contact")} className="flex flex-col items-center group focus:outline-none">
+          <Mail className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">Contact</span>
+        </button>
+      </nav>
+
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-1/2 space-y-6">
@@ -22,6 +52,7 @@ const Index = () => {
           <p className="text-xl text-gray-300">
             An aspiring developer with a strong command of Java and a deep interest in problem-solving and data visualization. I enjoy turning raw data into meaningful stories through tools like Tableau, Power BI, and MS Excel. With hands-on experience in building projects such as interactive dashboards, Java-based applications, and solving 250+ DSA problems on platforms like LeetCode and GeeksforGeeks, I thrive on analytical thinking and continuous learning. Let's connect!
           </p>
+          {/* Always-visible resume/video buttons */}
           <div className="flex gap-4">
             <Button
               variant="outline"
@@ -48,14 +79,16 @@ const Index = () => {
         </div>
       </section>
 
-      <About />
+      {/* Main Sections with IDs */}
+      <div id="about"><About /></div>
       <Skills />
-      <Projects />
+      <div id="projects"><Projects /></div>
       <Certificates />
       <VideoCV />
-      <Training />
-      <Education />
-      <Contact />
+      {/* Place training before education */}
+      <div id="training"><Training /></div>
+      <div id="education"><Education /></div>
+      <div id="contact"><Contact /></div>
     </div>
   );
 };
