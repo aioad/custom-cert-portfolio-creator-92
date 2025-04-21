@@ -3,8 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Book } from "lucide-react";
 
 const Training = () => (
-  <section id="training" className="py-14 bg-[#1A1F2C]/80 flex justify-center">
-    <div className="container mx-auto px-4 max-w-2xl">
+  <div className="flex justify-center">
+    <div className="w-full">
       <Card className="bg-[#2A2F3C]/90 border-purple-500/40 hover:border-purple-500 transition-all duration-300 shadow-md">
         <CardContent className="p-6">
           <div className="flex items-center gap-2 mb-4">
@@ -32,7 +32,7 @@ const Training = () => (
         </CardContent>
       </Card>
     </div>
-  </section>
+  </div>
 );
 
 export default Training;

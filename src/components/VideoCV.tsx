@@ -95,4 +95,3 @@ const VideoCV = () => {
 };
 
 export default VideoCV;
-
