@@ -1,15 +1,10 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Book } from "lucide-react";
 
 const Training = () => (
   <div className="w-full">
     <Card className="bg-[#2A2F3C]/90 border-purple-500/40 hover:border-purple-500 transition-all duration-300 shadow-md h-full">
       <CardContent className="p-6">
-        <div className="flex items-center gap-2 mb-4">
-          <Book className="w-6 h-6 text-purple-400" />
-          <h3 className="text-2xl font-bold text-purple-300">Technical Training</h3>
-        </div>
         <div className="w-full mb-6 flex justify-center">
           <img
             src="/lovable-uploads/b1a80735-8174-4426-b1e3-aa6682c053f5.png"
