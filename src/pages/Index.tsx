@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import About from "@/components/About";
@@ -10,6 +11,13 @@ import Training from "@/components/Training";
 import { FileText, Video, User, Briefcase, School, Mail, Linkedin, Award, BookOpen, Star, Heart } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
 import React from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 // Smooth scroll helper
 const scrollToId = (id: string) => {
@@ -179,23 +187,62 @@ const Index = () => {
                     <p className="text-purple-400">June 2023 – August 2023</p>
                   </div>
                 </div>
-                <ul className="list-disc list-inside text-gray-300 ml-2 leading-relaxed text-sm mb-4">
+                <ul className="list-disc list-inside text-gray-300 ml-2 leading-relaxed text-sm mb-6">
                   <li>Volunteered with a social welfare organization in Barsar, Himachal Pradesh</li>
                   <li>Assisted in providing support to underprivileged children and families</li>
                   <li>Participated in community development programs and educational initiatives</li>
                   <li>Helped with fundraising activities and resource distribution for those in need</li>
                 </ul>
-                <div className="grid grid-cols-2 gap-4">
-                  <img
-                    src="/lovable-uploads/17596642-0df7-4265-99c8-c380091a1988.png"
-                    alt="NGO Work 1"
-                    className="w-full h-32 object-cover rounded-md border border-purple-400/40"
-                  />
-                  <img
-                    src="/lovable-uploads/b9784d56-67a7-4b13-9232-966b2fcd1280.png"
-                    alt="NGO Work 2"
-                    className="w-full h-32 object-cover rounded-md border border-purple-400/40"
-                  />
+                
+                <div className="relative">
+                  <Carousel
+                    opts={{
+                      align: "start",
+                      loop: true,
+                    }}
+                    className="w-full"
+                  >
+                    <CarouselContent>
+                      <CarouselItem className="basis-full md:basis-1/2">
+                        <div className="p-1">
+                          <img
+                            src="/lovable-uploads/17596642-0df7-4265-99c8-c380091a1988.png"
+                            alt="NGO Work 1"
+                            className="w-full h-48 object-cover rounded-md border border-purple-400/40"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="basis-full md:basis-1/2">
+                        <div className="p-1">
+                          <img
+                            src="/lovable-uploads/b9784d56-67a7-4b13-9232-966b2fcd1280.png"
+                            alt="NGO Work 2"
+                            className="w-full h-48 object-cover rounded-md border border-purple-400/40"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="basis-full md:basis-1/2">
+                        <div className="p-1">
+                          <img
+                            src="/lovable-uploads/7375e64c-f79a-4055-b28b-4e6c13057b26.png"
+                            alt="NGO Work 3"
+                            className="w-full h-48 object-cover rounded-md border border-purple-400/40"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="basis-full md:basis-1/2">
+                        <div className="p-1">
+                          <img
+                            src="/lovable-uploads/2566a4d7-2d13-4343-a9c0-ffd5e414ee8c.png"
+                            alt="NGO Work 4"
+                            className="w-full h-48 object-cover rounded-md border border-purple-400/40"
+                          />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="left-1 bg-purple-600/80 hover:bg-purple-600 border-none text-white" />
+                    <CarouselNext className="right-1 bg-purple-600/80 hover:bg-purple-600 border-none text-white" />
+                  </Carousel>
                 </div>
               </CardContent>
             </Card>
