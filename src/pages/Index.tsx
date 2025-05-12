@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import About from "@/components/About";
@@ -40,13 +41,9 @@ const Index = () => {
           <Award className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
           <span className="text-xs text-purple-200">Certificates</span>
         </button>
-        <button onClick={() => scrollToId("training")} className="flex flex-col items-center group focus:outline-none">
+        <button onClick={() => scrollToId("education-training")} className="flex flex-col items-center group focus:outline-none">
           <BookOpen className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
-          <span className="text-xs text-purple-200">Training</span>
-        </button>
-        <button onClick={() => scrollToId("education")} className="flex flex-col items-center group focus:outline-none">
-          <School className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
-          <span className="text-xs text-purple-200">Education</span>
+          <span className="text-xs text-purple-200">Education & Training</span>
         </button>
         <button onClick={() => scrollToId("contact")} className="flex flex-col items-center group focus:outline-none">
           <Mail className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
@@ -118,8 +115,28 @@ const Index = () => {
       <div id="projects"><Projects /></div>
       <div id="certificates"><Certificates /></div>
       <VideoCV />
-      <div id="training"><Training /></div>
-      <div id="education"><Education /></div>
+      
+      {/* Combined Education and Training Section */}
+      <section id="education-training" className="py-16 bg-gradient-to-br from-[#181b22]/80 via-[#2A2F3C]/70 to-[#23082a]/90 overflow-hidden w-full">
+        <div className="w-full max-w-full">
+          <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
+            Education & Technical Training
+          </h2>
+          
+          <div className="flex flex-col md:flex-row w-full">
+            {/* Technical Training on the left */}
+            <div className="w-full md:w-1/2 px-4">
+              <Training />
+            </div>
+            
+            {/* Education on the right */}
+            <div className="w-full md:w-1/2 px-4">
+              <Education />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <div id="contact"><Contact /></div>
     </div>
   );

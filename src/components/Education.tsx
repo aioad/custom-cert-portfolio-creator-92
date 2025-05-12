@@ -40,44 +40,37 @@ const TimelineDot = ({ idx }: { idx: number }) => (
 );
 
 const Education = () => (
-  <section id="education" className="py-16 bg-gradient-to-br from-[#181b22]/80 via-[#2A2F3C]/70 to-[#23082a]/90 overflow-hidden w-full">
-    <div className="w-full px-4">
-      <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
-        Education
-      </h2>
-      <div className="flex justify-center w-full">
-        <div className="relative flex flex-col items-center w-full max-w-5xl">
-          {educationData.map((edu, idx) => (
-            <div key={edu.degree + idx} className="flex w-full mb-10 last:mb-0 items-center group">
-              <div className="flex flex-col items-center mx-2">
-                <TimelineDot idx={idx} />
-              </div>
-              <div className="flex-1 ml-6 p-5 bg-[#1A1F2C]/80 border border-purple-500/20 rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300 backdrop-blur-md hover:border-purple-500/70">
-                <div className="flex flex-row items-center gap-3">
-                  <img
-                    src={edu.image}
-                    alt={edu.institution}
-                    className="w-16 h-16 rounded-xl border-2 border-purple-500/40 object-cover shadow-md"
-                  />
-                  <div>
-                    <div className="text-lg font-bold text-purple-200">{edu.institution}</div>
-                    <div className="text-sm text-gray-400">{edu.location}</div>
-                  </div>
-                </div>
-                <div className="pl-20 mt-2">
-                  <div className="font-semibold text-white/90 text-base">{edu.degree}</div>
-                  <div className="flex gap-2 mt-1">
-                    <span className="text-xs text-purple-200 bg-purple-800/40 px-2 py-1 rounded">{edu.period}</span>
-                    <span className="text-xs font-bold text-pink-400 bg-pink-800/30 px-2 py-1 rounded">{edu.grade}</span>
-                  </div>
-                </div>
+  <div className="w-full">
+    <div className="relative flex flex-col items-center w-full">
+      {educationData.map((edu, idx) => (
+        <div key={edu.degree + idx} className="flex w-full mb-10 last:mb-0 items-center group">
+          <div className="flex flex-col items-center mx-2">
+            <TimelineDot idx={idx} />
+          </div>
+          <div className="flex-1 ml-6 p-5 bg-[#1A1F2C]/80 border border-purple-500/20 rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300 backdrop-blur-md hover:border-purple-500/70">
+            <div className="flex flex-row items-center gap-3">
+              <img
+                src={edu.image}
+                alt={edu.institution}
+                className="w-16 h-16 rounded-xl border-2 border-purple-500/40 object-cover shadow-md"
+              />
+              <div>
+                <div className="text-lg font-bold text-purple-200">{edu.institution}</div>
+                <div className="text-sm text-gray-400">{edu.location}</div>
               </div>
             </div>
-          ))}
+            <div className="pl-20 mt-2">
+              <div className="font-semibold text-white/90 text-base">{edu.degree}</div>
+              <div className="flex gap-2 mt-1">
+                <span className="text-xs text-purple-200 bg-purple-800/40 px-2 py-1 rounded">{edu.period}</span>
+                <span className="text-xs font-bold text-pink-400 bg-pink-800/30 px-2 py-1 rounded">{edu.grade}</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
-  </section>
+  </div>
 );
 
 export default Education;
