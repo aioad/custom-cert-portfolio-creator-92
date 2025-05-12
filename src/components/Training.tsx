@@ -29,16 +29,26 @@ const Training = () => (
     {/* Winter Training */}
     <Card className="bg-[#2A2F3C]/90 border-purple-500/40 hover:border-purple-500 transition-all duration-300 shadow-md">
       <CardContent className="p-5">
-        <div className="space-y-2">
-          <p className="text-white/90 font-semibold">Codeforces Competitive Programming</p>
-          <p className="text-purple-400">January 2025 – February 2025</p>
-          <ul className="list-disc list-inside text-gray-300 ml-2 leading-relaxed text-sm">
-            <li>Mastered competitive programming techniques and problem-solving strategies</li>
-            <li>Participated in coding contests and algorithmic challenges</li>
-            <li>Enhanced proficiency in time and space complexity optimization</li>
-            <li>Developed skills in pattern recognition for complex programming problems</li>
-          </ul>
+        <div className="flex items-center mb-4">
+          <div className="mr-4">
+            <img
+              src="https://codeforces.org/s/0/favicon-96x96.png"
+              alt="Codeforces Logo"
+              className="w-12 h-12 rounded-md border border-purple-500/50"
+              style={{ objectFit: "contain", background: "#1b1e2e" }}
+            />
+          </div>
+          <div className="space-y-2">
+            <p className="text-white/90 font-semibold">Codeforces Competitive Programming</p>
+            <p className="text-purple-400">January 2025 – February 2025</p>
+          </div>
         </div>
+        <ul className="list-disc list-inside text-gray-300 ml-2 leading-relaxed text-sm">
+          <li>Mastered competitive programming techniques and problem-solving strategies</li>
+          <li>Participated in coding contests and algorithmic challenges</li>
+          <li>Enhanced proficiency in time and space complexity optimization</li>
+          <li>Developed skills in pattern recognition for complex programming problems</li>
+        </ul>
       </CardContent>
     </Card>
   </div>
