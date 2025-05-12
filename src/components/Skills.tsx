@@ -1,7 +1,11 @@
 
 import { Card } from "@/components/ui/card";
+import { useState } from "react";
+import { Sparkles } from "lucide-react";
 
 const Skills = () => {
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+
   const languages = [
     { name: "C", icon: "/lovable-uploads/724947c7-5867-4f5b-836c-307d83d9212f.png" },
     { name: "C++", icon: "/lovable-uploads/b85a8eba-0af7-448d-b0e2-bf369bf74251.png" },
@@ -23,6 +27,48 @@ const Skills = () => {
     { name: "Eclipse", icon: "https://www.eclipse.org/downloads/assets/public/images/logo-eclipse.png" }
   ];
 
+  const handleMouseEnter = (skillName: string) => {
+    setHoveredSkill(skillName);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredSkill(null);
+  };
+
+  const SkillCard = ({ name, icon, type }: { name: string; icon: string; type: string }) => {
+    const isHovered = hoveredSkill === name;
+
+    return (
+      <Card 
+        key={name} 
+        className={`p-4 bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300 relative overflow-hidden ${isHovered ? 'shadow-lg shadow-purple-500/30 scale-105' : ''}`}
+        onMouseEnter={() => handleMouseEnter(name)}
+        onMouseLeave={handleMouseLeave}
+      >
+        {isHovered && (
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
+            <div className="absolute -top-4 -right-4">
+              <Sparkles className="w-10 h-10 text-purple-400 animate-pulse" />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-purple-600/5 via-pink-500/5 to-purple-400/5 rounded-full animate-pulse"></div>
+          </div>
+        )}
+        <div className="flex flex-col items-center gap-2 relative z-10">
+          <div className={`w-16 h-16 flex items-center justify-center transition-all duration-300 ${isHovered ? 'scale-110' : ''}`}>
+            <img src={icon} alt={name} className="w-full h-full object-contain" />
+          </div>
+          <span className={`transition-all duration-300 ${isHovered ? 'text-white font-medium' : 'text-gray-300'}`}>
+            {name}
+          </span>
+          {isHovered && (
+            <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 w-3/4 animate-pulse"></div>
+          )}
+        </div>
+      </Card>
+    );
+  };
+
   return (
     <section className="py-20 w-full">
       <div className="w-full px-6">
@@ -34,14 +80,7 @@ const Skills = () => {
             <h3 className="text-2xl font-semibold mb-4 text-purple-400">Languages</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {languages.map((lang) => (
-                <Card key={lang.name} className="p-4 bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-16 flex items-center justify-center">
-                      <img src={lang.icon} alt={lang.name} className="w-full h-full object-contain" />
-                    </div>
-                    <span className="text-gray-300">{lang.name}</span>
-                  </div>
-                </Card>
+                <SkillCard key={lang.name} name={lang.name} icon={lang.icon} type="language" />
               ))}
             </div>
           </div>
@@ -49,14 +88,7 @@ const Skills = () => {
             <h3 className="text-2xl font-semibold mb-4 text-purple-400">Tools & Platforms</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {tools.map((tool) => (
-                <Card key={tool.name} className="p-4 bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-16 flex items-center justify-center">
-                      <img src={tool.icon} alt={tool.name} className="w-full h-full object-contain" />
-                    </div>
-                    <span className="text-gray-300">{tool.name}</span>
-                  </div>
-                </Card>
+                <SkillCard key={tool.name} name={tool.name} icon={tool.icon} type="tool" />
               ))}
             </div>
           </div>
