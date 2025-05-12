@@ -52,14 +52,14 @@ const Education = () => (
               <img
                 src={edu.image}
                 alt={edu.institution}
-                className="w-24 h-24 rounded-xl border-2 border-purple-500/40 object-cover shadow-md"
+                className="w-28 h-28 rounded-xl border-2 border-purple-500/40 object-cover shadow-md"
               />
               <div>
                 <div className="text-xl font-bold text-purple-200">{edu.institution}</div>
                 <div className="text-sm text-gray-400">{edu.location}</div>
               </div>
             </div>
-            <div className="pl-28 mt-4">
+            <div className="pl-32 mt-4">
               <div className="font-semibold text-white/90 text-lg">{edu.degree}</div>
               <div className="flex gap-3 mt-2">
                 <span className="text-sm text-purple-200 bg-purple-800/40 px-3 py-1 rounded">{edu.period}</span>

@@ -109,6 +109,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Me section - moved right after the first section */}
+      <div id="about" className="scroll-mt-16">
+        <About />
+      </div>
+
       {/* Main Sections with IDs */}
       <div id="skills"><Skills /></div>
       <div id="projects"><Projects /></div>
@@ -122,19 +127,21 @@ const Index = () => {
             Education & Technical Training
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
             {/* Technical Training on the left - smaller size */}
-            <div className="md:col-span-4">
+            <div className="md:col-span-5">
               <div className="bg-[#1a1d28]/50 p-4 rounded-xl mb-4">
                 <h3 className="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Technical Training
                 </h3>
               </div>
-              <Training />
+              <div className="h-full flex flex-col">
+                <Training />
+              </div>
             </div>
             
             {/* Education on the right - larger size */}
-            <div className="md:col-span-8">
+            <div className="md:col-span-7">
               <div className="bg-[#1a1d28]/50 p-4 rounded-xl mb-4">
                 <h3 className="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
                   Education
@@ -147,9 +154,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
-      {/* About Me section - fixing the title issue */}
-      <div id="about" className="scroll-mt-16"><About /></div>
       
       <div id="contact"><Contact /></div>
     </div>
