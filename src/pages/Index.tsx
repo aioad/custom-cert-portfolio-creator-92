@@ -8,9 +8,9 @@ import Certificates from "@/components/Certificates";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Training from "@/components/Training";
-import { FileText, Video, User, Briefcase, School, Mail, Linkedin, Award, BookOpen, Star, Heart } from "lucide-react";
+import { FileText, Video, User, Briefcase, School, Mail, Linkedin, Award, BookOpen, Star, Heart, Sparkles } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
-import React from "react";
+import React, { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -28,6 +28,16 @@ const scrollToId = (id: string) => {
 };
 
 const Index = () => {
+  const [isHeroImageFlipped, setIsHeroImageFlipped] = useState(false);
+  
+  const handleHeroImageMouseEnter = () => {
+    setIsHeroImageFlipped(true);
+  };
+
+  const handleHeroImageMouseLeave = () => {
+    setIsHeroImageFlipped(false);
+  };
+
   return (
     <div className="min-h-screen bg-[#1A1F2C] text-white">
       {/* Navigation shortcut bar */}
@@ -111,12 +121,52 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2">
-          <img
-            src="/lovable-uploads/1fd2e7b5-cc8e-4252-bf2b-b01d81e0c90f.png"
-            alt="Megha Thakur"
-            className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-purple-500 shadow-lg shadow-purple-500/50"
-          />
+        <div className="lg:w-1/2 relative perspective-1000"
+             onMouseEnter={handleHeroImageMouseEnter}
+             onMouseLeave={handleHeroImageMouseLeave}>
+          <div 
+            className={`relative transition-transform duration-700 transform-style-3d ${isHeroImageFlipped ? 'rotate-y-180' : ''}`}
+            style={{ 
+              transformStyle: 'preserve-3d',
+              perspective: '1000px'
+            }}
+          >
+            {/* Front of card */}
+            <div 
+              className={`backface-hidden ${isHeroImageFlipped ? 'opacity-0' : 'opacity-100'}`}
+              style={{ backfaceVisibility: 'hidden', transition: 'opacity 0.7s' }}
+            >
+              <img
+                src="/lovable-uploads/1fd2e7b5-cc8e-4252-bf2b-b01d81e0c90f.png"
+                alt="Megha Thakur"
+                className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-purple-500 shadow-lg shadow-purple-500/50"
+              />
+            </div>
+            
+            {/* Back of card (same image with different style) */}
+            <div 
+              className={`absolute inset-0 backface-hidden ${isHeroImageFlipped ? 'opacity-100' : 'opacity-0'}`} 
+              style={{ 
+                backfaceVisibility: 'hidden',
+                transform: 'rotateY(180deg)',
+                transition: 'opacity 0.7s'
+              }}
+            >
+              <img
+                src="/lovable-uploads/1fd2e7b5-cc8e-4252-bf2b-b01d81e0c90f.png"
+                alt="Megha Thakur"
+                className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-pink-500 shadow-lg shadow-pink-500/50"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
+              <div className="absolute top-0 right-1/4">
+                <Sparkles className="w-10 h-10 text-pink-400 animate-pulse" />
+              </div>
+            </div>
+          </div>
+          
+          {isHeroImageFlipped && (
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 w-1/2 animate-pulse"></div>
+          )}
         </div>
       </section>
 
