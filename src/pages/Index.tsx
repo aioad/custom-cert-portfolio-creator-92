@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import About from "@/components/About";
@@ -123,14 +124,14 @@ const Index = () => {
           </h2>
           
           <div className="flex flex-col md:flex-row gap-6 w-full px-4">
-            {/* Technical Training on the left */}
-            <div className="w-full md:w-1/2">
+            {/* Technical Training on the left - make it smaller */}
+            <div className="w-full md:w-2/5">
               <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Technical Training</h3>
               <Training />
             </div>
             
-            {/* Education on the right */}
-            <div className="w-full md:w-1/2">
+            {/* Education on the right - make it bigger */}
+            <div className="w-full md:w-3/5">
               <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Education</h3>
               <Education />
             </div>

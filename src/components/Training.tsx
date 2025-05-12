@@ -4,19 +4,19 @@ import { Card, CardContent } from "@/components/ui/card";
 const Training = () => (
   <div className="w-full">
     <Card className="bg-[#2A2F3C]/90 border-purple-500/40 hover:border-purple-500 transition-all duration-300 shadow-md h-full">
-      <CardContent className="p-6">
-        <div className="w-full mb-6 flex justify-center">
+      <CardContent className="p-5">
+        <div className="w-full mb-4 flex justify-center">
           <img
             src="/lovable-uploads/b1a80735-8174-4426-b1e3-aa6682c053f5.png"
             alt="DSA Training Certificate"
             className="max-w-full rounded-lg shadow-lg object-contain border-2 border-purple-500 bg-black"
-            style={{ maxHeight: "350px", width: "auto", display: "block" }}
+            style={{ maxHeight: "300px", width: "auto", display: "block" }}
           />
         </div>
         <div className="space-y-2">
           <p className="text-white/90 font-semibold">SPRUCE (powered by Hitbullseye)</p>
           <p className="text-purple-400">June 2024 – July 2024</p>
-          <ul className="list-disc list-inside text-gray-300 ml-4 leading-relaxed text-sm">
+          <ul className="list-disc list-inside text-gray-300 ml-2 leading-relaxed text-sm">
             <li>Studied fundamental and advanced concepts of data structures, including arrays, linked lists, stacks, queues, trees, graphs, and hash tables.</li>
             <li>Learned algorithm design and analysis, focusing on sorting, searching, dynamic programming, and graph algorithms.</li>
             <li>Applied theoretical knowledge in practical scenarios through hands-on projects in Java, demonstrating proficiency in implementing and optimizing data structures and algorithms.</li>
