@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import About from "@/components/About";
@@ -41,13 +40,9 @@ const Index = () => {
           <Award className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
           <span className="text-xs text-purple-200">Certificates</span>
         </button>
-        <button onClick={() => scrollToId("education")} className="flex flex-col items-center group focus:outline-none">
+        <button onClick={() => scrollToId("education-training")} className="flex flex-col items-center group focus:outline-none">
           <School className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
-          <span className="text-xs text-purple-200">Education</span>
-        </button>
-        <button onClick={() => scrollToId("training")} className="flex flex-col items-center group focus:outline-none">
-          <BookOpen className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
-          <span className="text-xs text-purple-200">Training</span>
+          <span className="text-xs text-purple-200">Education & Training</span>
         </button>
         <button onClick={() => scrollToId("contact")} className="flex flex-col items-center group focus:outline-none">
           <Mail className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
@@ -120,26 +115,25 @@ const Index = () => {
       <div id="certificates"><Certificates /></div>
       <VideoCV />
       
-      {/* Education Section */}
-      <section id="education" className="py-16 bg-gradient-to-br from-[#181b22]/80 via-[#2A2F3C]/70 to-[#23082a]/90 overflow-hidden w-full">
+      {/* Combined Education and Training Sections Side by Side */}
+      <section id="education-training" className="py-16 bg-gradient-to-br from-[#181b22]/80 via-[#2A2F3C]/70 to-[#23082a]/90 overflow-hidden w-full">
         <div className="w-full max-w-full">
           <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
-            Education
+            Education & Technical Training
           </h2>
-          <div className="w-full px-4">
-            <Education />
-          </div>
-        </div>
-      </section>
-      
-      {/* Technical Training Section */}
-      <section id="training" className="py-16 bg-gradient-to-br from-[#23082a]/90 via-[#2A2F3C]/70 to-[#181b22]/80 overflow-hidden w-full">
-        <div className="w-full max-w-full">
-          <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
-            Technical Training
-          </h2>
-          <div className="w-full px-4">
-            <Training />
+          
+          <div className="flex flex-col md:flex-row gap-6 w-full px-4">
+            {/* Technical Training on the left */}
+            <div className="w-full md:w-1/2">
+              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Technical Training</h3>
+              <Training />
+            </div>
+            
+            {/* Education on the right */}
+            <div className="w-full md:w-1/2">
+              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Education</h3>
+              <Education />
+            </div>
           </div>
         </div>
       </section>
