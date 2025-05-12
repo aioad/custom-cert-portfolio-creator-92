@@ -49,12 +49,12 @@ const Certificates = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#1A1F2C]/50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-[#1A1F2C]/50 w-full">
+      <div className="w-full px-6">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Certificates
         </h2>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Carousel
             opts={{
               align: "start",

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import About from "@/components/About";
@@ -24,7 +23,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#1A1F2C] text-white">
       {/* Navigation shortcut bar */}
-      <nav className="flex justify-center gap-4 py-4 bg-[#191B23] border-b border-purple-900/30 sticky top-0 z-50 overflow-x-auto">
+      <nav className="flex justify-center gap-4 py-4 bg-[#191B23] border-b border-purple-900/30 sticky top-0 z-50 overflow-x-auto w-full">
         <button onClick={() => scrollToId("about")} className="flex flex-col items-center group focus:outline-none">
           <User className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
           <span className="text-xs text-purple-200">About</span>
@@ -56,17 +55,15 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <section className="w-full px-6 py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-1/2 space-y-6">
           <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient">
             Megha Thakur
           </h1>
-          {/* Replaced the big paragraph with the new two-line paragraph */}
           <p className="text-xl text-gray-300">
             Turning complex problems into elegant solutions with Java and data.<br />
             Passionate about code, curious about data, and always building something impactful.
           </p>
-          {/* Always-visible resume/video buttons and social icons, with LinkedIn and email next to them */}
           <div className="flex items-center gap-6">
             <div className="flex gap-4">
               <Button
@@ -121,7 +118,6 @@ const Index = () => {
       <div id="projects"><Projects /></div>
       <div id="certificates"><Certificates /></div>
       <VideoCV />
-      {/* Place training before education */}
       <div id="training"><Training /></div>
       <div id="education"><Education /></div>
       <div id="contact"><Contact /></div>

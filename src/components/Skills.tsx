@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 
 const Skills = () => {
@@ -23,12 +24,12 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
+    <section className="py-20 w-full">
+      <div className="w-full px-6">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Skills
         </h2>
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-7xl mx-auto">
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-purple-400">Languages</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

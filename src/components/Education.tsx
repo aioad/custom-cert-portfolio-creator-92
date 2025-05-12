@@ -40,13 +40,13 @@ const TimelineDot = ({ idx }: { idx: number }) => (
 );
 
 const Education = () => (
-  <section id="education" className="py-16 bg-gradient-to-br from-[#181b22]/80 via-[#2A2F3C]/70 to-[#23082a]/90 overflow-hidden">
-    <div className="container mx-auto px-4">
+  <section id="education" className="py-16 bg-gradient-to-br from-[#181b22]/80 via-[#2A2F3C]/70 to-[#23082a]/90 overflow-hidden w-full">
+    <div className="w-full px-4">
       <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
         Education
       </h2>
-      <div className="flex justify-end">
-        <div className="relative flex flex-col items-center max-w-3xl w-full">
+      <div className="flex justify-center w-full">
+        <div className="relative flex flex-col items-center w-full max-w-5xl">
           {educationData.map((edu, idx) => (
             <div key={edu.degree + idx} className="flex w-full mb-10 last:mb-0 items-center group">
               <div className="flex flex-col items-center mx-2">

@@ -70,12 +70,12 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#1A1F2C]/50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-[#1A1F2C]/50 w-full">
+      <div className="w-full px-6">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Contact Me
         </h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Links */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {contactLinks.map((contact, index) => (

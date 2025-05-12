@@ -3,8 +3,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Book } from "lucide-react";
 
 const Training = () => (
-  <section id="training" className="py-14 bg-[#1A1F2C]/80 flex justify-center">
-    <div className="container mx-auto px-4 max-w-2xl">
+  <section id="training" className="py-14 bg-[#1A1F2C]/80 w-full flex justify-center">
+    <div className="w-full px-6 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        Technical Training
+      </h2>
       <Card className="bg-[#2A2F3C]/90 border-purple-500/40 hover:border-purple-500 transition-all duration-300 shadow-md">
         <CardContent className="p-6">
           <div className="flex items-center gap-2 mb-4">
@@ -12,7 +15,6 @@ const Training = () => (
             <h3 className="text-2xl font-bold text-purple-300">Technical Training</h3>
           </div>
           <div className="w-full mb-6 flex justify-center">
-            {/* Show the full certificate image */}
             <img
               src="/lovable-uploads/b1a80735-8174-4426-b1e3-aa6682c053f5.png"
               alt="DSA Training Certificate"
