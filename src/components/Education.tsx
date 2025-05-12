@@ -34,7 +34,7 @@ const TimelineDot = ({ idx }: { idx: number }) => (
       <School className="w-3 h-3 text-white" />
     </div>
     {idx < educationData.length - 1 && (
-      <div className="w-1 h-20 bg-gradient-to-b from-purple-500/80 to-pink-500/40 mt-0.5" />
+      <div className="w-1 h-24 bg-gradient-to-b from-purple-500/80 to-pink-500/40 mt-0.5" />
     )}
   </div>
 );
@@ -43,23 +43,23 @@ const Education = () => (
   <div className="w-full">
     <div className="relative flex flex-col items-center w-full">
       {educationData.map((edu, idx) => (
-        <div key={edu.degree + idx} className="flex w-full mb-12 last:mb-0 items-center group">
+        <div key={edu.degree + idx} className="flex w-full mb-14 last:mb-0 items-center group">
           <div className="flex flex-col items-center mx-3">
             <TimelineDot idx={idx} />
           </div>
           <div className="flex-1 ml-6 p-6 bg-[#1A1F2C]/80 border border-purple-500/20 rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300 backdrop-blur-md hover:border-purple-500/70">
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row items-center gap-5">
               <img
                 src={edu.image}
                 alt={edu.institution}
-                className="w-20 h-20 rounded-xl border-2 border-purple-500/40 object-cover shadow-md"
+                className="w-24 h-24 rounded-xl border-2 border-purple-500/40 object-cover shadow-md"
               />
               <div>
                 <div className="text-xl font-bold text-purple-200">{edu.institution}</div>
                 <div className="text-sm text-gray-400">{edu.location}</div>
               </div>
             </div>
-            <div className="pl-24 mt-3">
+            <div className="pl-28 mt-4">
               <div className="font-semibold text-white/90 text-lg">{edu.degree}</div>
               <div className="flex gap-3 mt-2">
                 <span className="text-sm text-purple-200 bg-purple-800/40 px-3 py-1 rounded">{edu.period}</span>

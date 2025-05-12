@@ -110,34 +110,46 @@ const Index = () => {
       </section>
 
       {/* Main Sections with IDs */}
-      <div id="about"><About /></div>
       <div id="skills"><Skills /></div>
       <div id="projects"><Projects /></div>
       <div id="certificates"><Certificates /></div>
       <VideoCV />
       
-      {/* Combined Education and Training Sections Side by Side */}
+      {/* Education and Training Sections with improved layout */}
       <section id="education-training" className="py-16 bg-gradient-to-br from-[#181b22]/80 via-[#2A2F3C]/70 to-[#23082a]/90 overflow-hidden w-full">
-        <div className="w-full max-w-full">
-          <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-extrabold mb-10 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
             Education & Technical Training
           </h2>
           
-          <div className="flex flex-col md:flex-row gap-6 w-full px-4">
-            {/* Technical Training on the left - make it smaller */}
-            <div className="w-full md:w-2/5">
-              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Technical Training</h3>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            {/* Technical Training on the left - smaller size */}
+            <div className="md:col-span-4">
+              <div className="bg-[#1a1d28]/50 p-4 rounded-xl mb-4">
+                <h3 className="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Technical Training
+                </h3>
+              </div>
               <Training />
             </div>
             
-            {/* Education on the right - make it bigger */}
-            <div className="w-full md:w-3/5">
-              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Education</h3>
-              <Education />
+            {/* Education on the right - larger size */}
+            <div className="md:col-span-8">
+              <div className="bg-[#1a1d28]/50 p-4 rounded-xl mb-4">
+                <h3 className="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                  Education
+                </h3>
+              </div>
+              <div className="bg-[#1a1d28]/30 p-4 rounded-xl">
+                <Education />
+              </div>
             </div>
           </div>
         </div>
       </section>
+      
+      {/* About Me section - fixing the title issue */}
+      <div id="about" className="scroll-mt-16"><About /></div>
       
       <div id="contact"><Contact /></div>
     </div>
