@@ -15,7 +15,7 @@ const VideoCV = () => {
     <section className="py-20 bg-[#1A1F2C]/50">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Video CV
+          {flipped ? "Resume" : "Video CV"}
         </h2>
         <div className="max-w-2xl mx-auto" style={{ perspective: "1200px" }}>
           <div
@@ -79,9 +79,6 @@ const VideoCV = () => {
               </div>
             </Card>
           </div>
-          <p className="text-center text-purple-300 mt-6 text-sm italic">
-            Click on the card to toggle between Video CV and Resume PDF
-          </p>
         </div>
       </div>
     </section>

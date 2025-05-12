@@ -45,8 +45,8 @@ const Education = () => (
       <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 via-pink-400 to-purple-700 bg-clip-text text-transparent tracking-wide">
         Education
       </h2>
-      <div className="flex justify-center">
-        <div className="relative flex flex-col items-center max-w-2xl w-full">
+      <div className="flex justify-end">
+        <div className="relative flex flex-col items-center max-w-3xl w-full">
           {educationData.map((edu, idx) => (
             <div key={edu.degree + idx} className="flex w-full mb-10 last:mb-0 items-center group">
               <div className="flex flex-col items-center mx-2">
@@ -81,4 +81,3 @@ const Education = () => (
 );
 
 export default Education;
-

@@ -8,7 +8,7 @@ import Certificates from "@/components/Certificates";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Training from "@/components/Training";
-import { FileText, Video, User, Briefcase, School, Mail, Linkedin } from "lucide-react";
+import { FileText, Video, User, Briefcase, School, Mail, Linkedin, Award, BookOpen, Star } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
 import React from "react";
 
@@ -24,14 +24,26 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#1A1F2C] text-white">
       {/* Navigation shortcut bar */}
-      <nav className="flex justify-center gap-8 py-4 bg-[#191B23] border-b border-purple-900/30 sticky top-0 z-50">
+      <nav className="flex justify-center gap-4 py-4 bg-[#191B23] border-b border-purple-900/30 sticky top-0 z-50 overflow-x-auto">
         <button onClick={() => scrollToId("about")} className="flex flex-col items-center group focus:outline-none">
           <User className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
           <span className="text-xs text-purple-200">About</span>
         </button>
+        <button onClick={() => scrollToId("skills")} className="flex flex-col items-center group focus:outline-none">
+          <Star className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">Skills</span>
+        </button>
         <button onClick={() => scrollToId("projects")} className="flex flex-col items-center group focus:outline-none">
           <Briefcase className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
           <span className="text-xs text-purple-200">Projects</span>
+        </button>
+        <button onClick={() => scrollToId("certificates")} className="flex flex-col items-center group focus:outline-none">
+          <Award className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">Certificates</span>
+        </button>
+        <button onClick={() => scrollToId("training")} className="flex flex-col items-center group focus:outline-none">
+          <BookOpen className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">Training</span>
         </button>
         <button onClick={() => scrollToId("education")} className="flex flex-col items-center group focus:outline-none">
           <School className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
@@ -105,9 +117,9 @@ const Index = () => {
 
       {/* Main Sections with IDs */}
       <div id="about"><About /></div>
-      <Skills />
+      <div id="skills"><Skills /></div>
       <div id="projects"><Projects /></div>
-      <Certificates />
+      <div id="certificates"><Certificates /></div>
       <VideoCV />
       {/* Place training before education */}
       <div id="training"><Training /></div>
@@ -118,4 +130,3 @@ const Index = () => {
 };
 
 export default Index;
-
