@@ -185,26 +185,16 @@ const Index = () => {
                   <li>Participated in community development programs and educational initiatives</li>
                   <li>Helped with fundraising activities and resource distribution for those in need</li>
                 </ul>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-4">
                   <img
                     src="/lovable-uploads/17596642-0df7-4265-99c8-c380091a1988.png"
                     alt="NGO Work 1"
-                    className="w-full h-auto object-cover rounded-md border border-purple-400/40"
+                    className="w-full h-32 object-cover rounded-md border border-purple-400/40"
                   />
                   <img
                     src="/lovable-uploads/b9784d56-67a7-4b13-9232-966b2fcd1280.png"
                     alt="NGO Work 2"
-                    className="w-full h-auto object-cover rounded-md border border-purple-400/40"
-                  />
-                  <img
-                    src="/lovable-uploads/d4326dad-35de-4337-8f26-df17d7a36101.png"
-                    alt="NGO Work 3"
-                    className="w-full h-auto object-cover rounded-md border border-purple-400/40"
-                  />
-                  <img
-                    src="/lovable-uploads/e838fd84-3836-4ce0-8f7b-bacff2c3bbae.png"
-                    alt="NGO Work 4"
-                    className="w-full h-auto object-cover rounded-md border border-purple-400/40"
+                    className="w-full h-32 object-cover rounded-md border border-purple-400/40"
                   />
                 </div>
               </CardContent>
