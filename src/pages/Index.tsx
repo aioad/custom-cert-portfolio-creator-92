@@ -8,7 +8,7 @@ import Certificates from "@/components/Certificates";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Training from "@/components/Training";
-import { FileText, Video, User, Briefcase, School, Mail, Linkedin, Award, BookOpen, Star } from "lucide-react";
+import { FileText, Video, User, Briefcase, School, Mail, Linkedin, Award, BookOpen, Star, Heart } from "lucide-react";
 import VideoCV from "@/components/VideoCV";
 import React from "react";
 
@@ -44,6 +44,10 @@ const Index = () => {
         <button onClick={() => scrollToId("education-training")} className="flex flex-col items-center group focus:outline-none">
           <School className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
           <span className="text-xs text-purple-200">Education & Training</span>
+        </button>
+        <button onClick={() => scrollToId("volunteer")} className="flex flex-col items-center group focus:outline-none">
+          <Heart className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
+          <span className="text-xs text-purple-200">Volunteer</span>
         </button>
         <button onClick={() => scrollToId("contact")} className="flex flex-col items-center group focus:outline-none">
           <Mail className="w-7 h-7 mb-1 text-purple-400 group-hover:scale-110 transition" />
@@ -151,6 +155,51 @@ const Index = () => {
                 <Education />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* NGO Experience Section */}
+      <section id="volunteer" className="py-16 bg-[#1A1F2C] overflow-hidden w-full">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-extrabold mb-10 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent tracking-wide">
+            Volunteer Experience
+          </h2>
+          
+          <div className="max-w-3xl mx-auto">
+            <Card className="bg-[#2A2F3C]/90 border-purple-500/40 hover:border-purple-500 transition-all duration-300 shadow-md">
+              <CardContent className="p-5">
+                <div className="flex items-center mb-4">
+                  <div className="mr-4">
+                    <div className="w-12 h-12 rounded-md border border-purple-500/50 bg-[#1b1e2e] flex items-center justify-center">
+                      <Heart className="w-8 h-8 text-pink-400" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-white/90 font-semibold">Yattra Jan Kalyan NGO</p>
+                    <p className="text-purple-400">June 2023 – August 2023</p>
+                  </div>
+                </div>
+                <ul className="list-disc list-inside text-gray-300 ml-2 leading-relaxed text-sm">
+                  <li>Volunteered with a social welfare organization in Barsar, Himachal Pradesh</li>
+                  <li>Assisted in providing support to underprivileged children and families</li>
+                  <li>Participated in community development programs and educational initiatives</li>
+                  <li>Helped with fundraising activities and resource distribution for those in need</li>
+                </ul>
+                <div className="grid grid-cols-2 gap-2 mt-4">
+                  <img
+                    src="/lovable-uploads/17596642-0df7-4265-99c8-c380091a1988.png"
+                    alt="NGO Work with Children"
+                    className="w-full h-32 object-cover rounded-md border border-purple-400/40"
+                  />
+                  <img
+                    src="/lovable-uploads/b9784d56-67a7-4b13-9232-966b2fcd1280.png"
+                    alt="NGO Community Support"
+                    className="w-full h-32 object-cover rounded-md border border-purple-400/40"
+                  />
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
