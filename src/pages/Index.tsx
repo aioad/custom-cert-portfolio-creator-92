@@ -83,7 +83,7 @@ const Index = () => {
           </div>
         </div>
         <div className="lg:w-1/2">
-          <img src="/lovable-uploads/1fd2e7b5-cc8e-4252-bf2b-b01d81e0c90f.png" alt="Megha Thakur" className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-purple-500 shadow-lg shadow-purple-500/50" />
+          <img alt="Megha Thakur" className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-purple-500 shadow-lg shadow-purple-500/50" src="/lovable-uploads/3e962df5-f738-48b8-9240-217ae6fdc121.jpg" />
         </div>
       </section>
 
