@@ -61,8 +61,7 @@ const Index = () => {
         <div className="lg:w-1/2 space-y-6">
           <h1 className="bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient mx-0 my-0 px-0 py-0 text-5xl font-semibold text-left">Dashmeet Singh</h1>
           <p className="text-xl text-gray-300">
-            Turning complex problems into elegant solutions with Java and data.<br />
-            Passionate about code, curious about data, and always building something impactful.
+            Results-driven cybersecurity professional with a strong foundation in threat analysis, vulnerability identification, and defense strategies. Proven ability to work effectively under pressure, adapt to dynamic environments, and collaborate with teams to deliver high-quality results. With a background as a defense aspirant, I bring a unique perspective to cybersecurity, leveraging technical expertise and resilience to protect critical systems.
           </p>
           <div className="flex items-center gap-6">
             <div className="flex gap-4">
