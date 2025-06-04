@@ -22,8 +22,10 @@ const scrollToId = (id: string) => {
     });
   }
 };
+
 const Index = () => {
-  return <div className="min-h-screen bg-[#1A1F2C] text-white">
+  return (
+    <div className="min-h-screen bg-[#1A1F2C] text-white">
       {/* Navigation shortcut bar */}
       <nav className="flex justify-center gap-4 py-4 bg-[#191B23] border-b border-purple-900/30 sticky top-0 z-50 overflow-x-auto w-full">
         <button onClick={() => scrollToId("about")} className="flex flex-col items-center group focus:outline-none">
@@ -199,6 +201,8 @@ const Index = () => {
       </section>
       
       <div id="contact"><Contact /></div>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
