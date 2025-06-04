@@ -22,10 +22,8 @@ const scrollToId = (id: string) => {
     });
   }
 };
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-[#1A1F2C] text-white">
+  return <div className="min-h-screen bg-[#1A1F2C] text-white">
       {/* Navigation shortcut bar */}
       <nav className="flex justify-center gap-4 py-4 bg-[#191B23] border-b border-purple-900/30 sticky top-0 z-50 overflow-x-auto w-full">
         <button onClick={() => scrollToId("about")} className="flex flex-col items-center group focus:outline-none">
@@ -67,11 +65,7 @@ const Index = () => {
           </p>
           <div className="flex items-center gap-6">
             <div className="flex gap-4">
-              <Button 
-                variant="outline" 
-                className="border-purple-500 bg-transparent text-purple-300 hover:bg-purple-500 flex items-center" 
-                onClick={() => window.open("/lovable-uploads/ae754478-1af4-4b35-a092-3e1f1170be8d.png", "_blank")}
-              >
+              <Button variant="outline" className="border-purple-500 bg-transparent text-purple-300 hover:bg-purple-500 flex items-center" onClick={() => window.open("https://drive.google.com/file/d/19NEay0YFJpEw5cUe2zPgMH8ZYTqiGim4/view?usp=sharing", "_blank")}>
                 <FileText className="mr-2" /> View Resume
               </Button>
               <Button variant="outline" className="border-purple-500 bg-transparent text-purple-300 hover:bg-purple-500 flex items-center" onClick={() => window.open("https://drive.google.com/file/d/1jtxxKz3xn6SFYe948tnfM3BmX1RvRqWq/view?usp=sharing", "_blank")}>
@@ -80,7 +74,7 @@ const Index = () => {
             </div>
             <div className="flex space-x-6 text-purple-400">
               <a href="mailto:meghathakur292@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" className="hover:text-purple-600 transition">
-                <Mail className="w-7 h-7" />
+                
               </a>
               <a href="https://www.linkedin.com/in/meghathakur28" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-purple-600 transition">
                 <Linkedin className="w-7 h-7" />
@@ -205,8 +199,6 @@ const Index = () => {
       </section>
       
       <div id="contact"><Contact /></div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
