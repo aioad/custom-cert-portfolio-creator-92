@@ -9,7 +9,7 @@ const Skills = () => {
   const languages = [
     { name: "C", icon: "/lovable-uploads/724947c7-5867-4f5b-836c-307d83d9212f.png" },
     { name: "C++", icon: "/lovable-uploads/b85a8eba-0af7-448d-b0e2-bf369bf74251.png" },
-    { name: "HTML", icon: "/lovable-uploads/ff22e2b5-6baa-4fe9-816a-294bc0c7f4ee.png" },
+    { name: "HTML", icon: "/lovable-uploads/d3c2c7b2-10da-4adf-ae7a-7b7b47857e91.png" },
     { name: "Python", icon: "/lovable-uploads/9136a116-7e13-48ef-ad1d-12156b5b1677.png" },
     { name: "R", icon: "/lovable-uploads/f55585da-383e-49d0-a413-60364a9f96fd.png" }
   ];
