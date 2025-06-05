@@ -1,3 +1,4 @@
+
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
 import { Sparkles } from "lucide-react";
@@ -14,7 +15,7 @@ const Skills = () => {
   ];
 
   const tools = [
-    { name: "Power BI", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/630px-New_Power_BI_Logo.svg.png" },
+    { name: "Windows Terminal", icon: "/lovable-uploads/1ad109a1-4251-45be-8a9c-2661f4153bb5.png" },
     { name: "Ms-Excel", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" },
     { name: "Tableau", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Tableau_Logo.png/640px-Tableau_Logo.png" },
     { name: "MySQL", icon: "https://www.mysql.com/common/logos/logo-mysql-170x115.png" },
