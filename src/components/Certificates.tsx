@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 import { Sparkles } from "lucide-react";
@@ -14,6 +13,14 @@ const Certificates = () => {
       date: "May 2025",
       image: "/lovable-uploads/864ceb20-e442-4719-9392-226013008e06.png",
       description: "Professional Certificate in Cybersecurity Analysis covering threat vectors, identity solutions, and security management."
+    },
+    {
+      id: "certified-ethical-hacker",
+      title: "Certified Ethical Hacker",
+      issuer: "WsCube Tech",
+      date: "February 2025",
+      image: "/lovable-uploads/4f3441b3-b326-46e7-873b-ede5e981c32e.png",
+      description: "2 months comprehensive ethical hacking training covering penetration testing methodologies and security assessment techniques."
     },
     {
       id: "google-cybersecurity",
