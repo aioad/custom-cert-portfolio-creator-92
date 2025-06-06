@@ -23,6 +23,14 @@ const Certificates = () => {
       description: "2 months comprehensive ethical hacking training covering penetration testing methodologies and security assessment techniques."
     },
     {
+      id: "certified-network-security",
+      title: "Certified Network Security Practitioner",
+      issuer: "The SecOps Group",
+      date: "January 2025",
+      image: "/lovable-uploads/bd0be634-9980-44d4-b5f5-b72436e91f1e.png",
+      description: "Comprehensive network security certification covering CNSP with merit, focusing on network security best practices and implementation."
+    },
+    {
       id: "google-cybersecurity",
       title: "Google Cybersecurity Professional Certificate",
       issuer: "Google",
