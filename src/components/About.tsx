@@ -10,7 +10,7 @@ const About = () => {
             <img 
               alt="Megha Thakur" 
               className="w-full h-auto object-cover rounded-lg shadow-lg border-2 border-purple-500/30" 
-              src="/lovable-uploads/f28b6bbc-ef2b-4231-8235-59b14525e0db.jpg" 
+              src="/lovable-uploads/dashmeet-singh.png" 
             />
           </div>
           
