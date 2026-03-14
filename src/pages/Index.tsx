@@ -85,7 +85,6 @@ const Index = () => {
       <div id="skills"><Skills /></div>
       <div id="projects"><Projects /></div>
       <div id="certificates"><Certificates /></div>
-      
 
       {/* Education & Training */}
       <section id="education-training" className="py-16 bg-cyber-bg-elevated/50 overflow-hidden w-full">
