@@ -18,15 +18,15 @@ const Projects = () => {
       technologies: ["Python", "Machine Learning", "Network Security", "AI"]
     },
     {
-      title: "Sudoku Solver Visualizer",
-      image: "/lovable-uploads/7053e5f5-d14c-4926-8333-f93a8d0a570c.png",
+      title: "SecureWatch IDS - Intelligent Intrusion Detection System",
+      image: "/lovable-uploads/securewatch-dashboard.png",
       points: [
-        "Developed interactive GUI with Java Swing to enhance user solving experience.",
-        "Optimized algorithm solves 9x9 puzzles in under 0.1 seconds efficiently.",
-        "Achieved 100% solution accuracy, reduced solving time by 90%, improved usability."
+        "Intelligent Alerting System - Automated alerts with severity classification.",
+        "Packet Tracing - Deep packet inspection and analysis.",
+        "Threat Intelligence - Indicators of Compromise (IoC) tracking and management."
       ],
-      githubLink: "https://github.com/meghathakur28/Project-Sudoku-Solver-Visualiser-",
-      technologies: ["Java", "Java Swing"]
+      githubLink: "https://github.com/aioad/SecureWatch.git",
+      technologies: ["React", "TypeScript", "Supabase", "Network Security"]
     },
     {
       title: "SuperStore Sales Dashboard",
