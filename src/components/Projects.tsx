@@ -7,15 +7,15 @@ const Projects = () => {
 
   const projectsData = [
     {
-      title: "Amazon Prime Video Dashboard",
+      title: "NetHawk - AI-Powered Network Security System",
       image: "/lovable-uploads/1c911df6-335f-493c-b2b1-2a8fddf877a6.png",
       points: [
-        "Visualized 9,000+ titles using Radial Bars, Donut Charts, and Bar Graphs.",
-        "Displayed global content trends by genre, rating, country, and content type.",
-        "Found 80.82% were movies, 24.7% were drama, and 39% from the U.S."
+        "Real-time Network Monitoring with live packet analysis.",
+        "AI-Powered Threat Detection using machine learning algorithms.",
+        "Automated IP Blocking with intelligent response systems."
       ],
-      githubLink: "https://github.com/meghathakur28/PrimeVideo_Dhasboard",
-      technologies: ["Tableau", "Excel", "Data Visualization", "Data Analysis"]
+      githubLink: "https://github.com/aioad/NetHawk.git",
+      technologies: ["Python", "Machine Learning", "Network Security", "AI"]
     },
     {
       title: "Sudoku Solver Visualizer",
