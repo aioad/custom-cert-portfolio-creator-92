@@ -5,8 +5,7 @@ import { Video, FileText, RotateCw } from "lucide-react";
 
 const VIDEO_SRC =
   "https://drive.google.com/file/d/1jtxxKz3xn6SFYe948tnfM3BmX1RvRqWq/preview";
-const RESUME_PDF =
-  "https://drive.google.com/file/d/19NEay0YFJpEw5cUe2zPgMH8ZYTqiGim4/preview";
+const RESUME_PDF = "/resume.pdf";
 
 const VideoCV = () => {
   const [flipped, setFlipped] = useState(false);
