@@ -9,19 +9,19 @@ const Skills = () => {
   const offensiveSecurity = [
     { name: "Kali Linux", icon: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" },
     { name: "Metasploit", icon: "https://www.kali.org/tools/metasploit-framework/images/metasploit-framework-logo.svg" },
-    { name: "Burp Suite", icon: "https://cdn.prod.website-files.com/65a20c289e58e38e78020b5a/65ead9eecfbd5ff3e24a2e3d_PortSwigger-Logo-Black.svg" },
+    { name: "Burp Suite", icon: "/logos/burpsuite.png" },
     { name: "Nmap", icon: "https://nmap.org/images/sitelogo-nmap.svg" },
     { name: "Wireshark", icon: "https://upload.wikimedia.org/wikipedia/commons/d/df/Wireshark_icon.svg" },
-    { name: "John the Ripper", icon: "https://www.openwall.com/john/Openwall_logo.png" },
+    { name: "John the Ripper", icon: "/logos/john-the-ripper.png" },
     { name: "Hydra", icon: "https://www.kali.org/tools/hydra/images/hydra-logo.svg" },
     { name: "Aircrack-ng", icon: "https://www.kali.org/tools/aircrack-ng/images/aircrack-ng-logo.svg" },
   ];
 
   const defensiveSecurity = [
     { name: "Splunk", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Splunk-Logo.jpg" },
-    { name: "Snort", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Snort_ids_logo.png" },
-    { name: "OpenVAS", icon: "https://www.kali.org/tools/openvas-scanner/images/openvas-scanner-logo.svg" },
-    { name: "Nessus", icon: "https://upload.wikimedia.org/wikipedia/commons/4/48/Nessus-Professional-FullColor-RGB.svg" },
+    { name: "Snort", icon: "/logos/snort.png" },
+    { name: "OpenVAS", icon: "/logos/openvas.png" },
+    { name: "Nessus", icon: "/logos/nessus.png" },
     { name: "pfSense", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b9/PfSense_logo.png" },
   ];
 
