@@ -1,11 +1,10 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Github, Sparkles } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-  
+
   const projectsData = [
     {
       title: "Amazon Prime Video Dashboard",
@@ -42,80 +41,63 @@ const Projects = () => {
     }
   ];
 
-  const handleMouseEnter = (projectTitle: string) => {
-    setHoveredProject(projectTitle);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredProject(null);
-  };
-
   return (
     <section className="py-20 w-full">
       <div className="w-full px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <span className="font-mono text-xs text-cyber-text-muted uppercase tracking-[0.2em]">// projects</span>
+        </div>
+        <h2 className="text-4xl font-mono font-bold mb-12 text-center cyber-gradient-text">
           Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projectsData.map((project, index) => {
             const isHovered = hoveredProject === project.title;
-            
             return (
-              <Card 
-                key={index} 
-                className={`bg-[#2A2F3C] border-purple-500/30 overflow-hidden h-full flex flex-col hover:border-purple-500 transition-all duration-300 relative ${isHovered ? 'shadow-lg shadow-purple-500/30 scale-102' : ''}`}
-                onMouseEnter={() => handleMouseEnter(project.title)}
-                onMouseLeave={handleMouseLeave}
+              <Card
+                key={index}
+                className={`cyber-card rounded-lg overflow-hidden h-full flex flex-col transition-all duration-300 ${
+                  isHovered ? 'shadow-[0_0_25px_hsl(170,80%,40%,0.15)] border-cyber-border-hover scale-[1.02]' : ''
+                }`}
+                onMouseEnter={() => setHoveredProject(project.title)}
+                onMouseLeave={() => setHoveredProject(null)}
               >
-                {isHovered && (
-                  <div className="absolute inset-0 pointer-events-none z-10">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5"></div>
-                    <div className="absolute -top-4 -right-4">
-                      <Sparkles className="w-10 h-10 text-purple-400 animate-pulse" />
-                    </div>
-                  </div>
-                )}
                 <div className="w-full h-48 overflow-hidden relative">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'scale-110' : ''}`}
                   />
-                  {isHovered && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1F2C]/70 to-transparent"></div>
-                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyber-bg to-transparent opacity-60" />
                 </div>
-                <CardContent className="p-6 flex flex-col h-full relative z-20">
-                  <h3 className={`text-xl font-bold mb-3 transition-colors duration-300 ${isHovered ? 'text-purple-300' : 'text-purple-300/90'}`}>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="text-lg font-mono font-semibold mb-3 text-cyber-text-heading">
                     {project.title}
-                    {isHovered && (
-                      <div className="h-0.5 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 w-3/4 mt-1 animate-pulse"></div>
-                    )}
                   </h3>
-                  <ul className="list-disc pl-5 mb-4 text-gray-300 text-sm space-y-1">
+                  <ul className="list-disc pl-5 mb-4 text-cyber-text-muted text-sm space-y-1">
                     {project.points.map((point, i) => (
-                      <li key={i} className={`transition-colors duration-300 ${isHovered ? 'text-gray-200' : 'text-gray-300'}`}>{point}</li>
+                      <li key={i}>{point}</li>
                     ))}
                   </ul>
                   <div className="mt-auto">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, i) => (
-                        <span 
-                          key={i} 
-                          className={`px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded transition-all duration-300 ${isHovered ? 'bg-purple-500/30 text-purple-200' : ''}`}
+                        <span
+                          key={i}
+                          className="px-2 py-1 bg-cyber-accent-dim/30 text-cyber-accent text-xs font-mono rounded border border-cyber-border"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
-                    <a 
-                      href={project.githubLink} 
-                      target="_blank" 
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center transition-colors duration-300 ${isHovered ? 'text-purple-200' : 'text-purple-300'} hover:text-purple-400`}
+                      className="inline-flex items-center text-cyber-text-muted hover:text-cyber-accent transition-colors font-mono text-sm"
                     >
-                      <Github className={`h-4 w-4 mr-2 ${isHovered ? 'animate-pulse' : ''}`} />
-                      GitHub Repository
+                      <Github className="h-4 w-4 mr-2" />
+                      Repository
                     </a>
                   </div>
                 </CardContent>
