@@ -25,7 +25,7 @@ const Projects = () => {
         "Packet Tracing - Deep packet inspection and analysis.",
         "Threat Intelligence - Indicators of Compromise (IoC) tracking and management."
       ],
-      githubLink: "https://github.com/aioad/SecureWatch.git",
+      githubLink: "https://github.com/aioad/secure-watchtower-hub.git",
       technologies: ["React", "TypeScript", "Supabase", "Network Security"]
     },
     {
