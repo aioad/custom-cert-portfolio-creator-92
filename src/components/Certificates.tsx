@@ -1,10 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
-import { Sparkles } from "lucide-react";
+import { Award } from "lucide-react";
 
 const Certificates = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-  
+
   const certificates = [
     {
       id: "microsoft-cybersecurity",
@@ -72,60 +72,46 @@ const Certificates = () => {
     }
   ];
 
-  const handleMouseEnter = (cardId: string) => {
-    setHoveredCard(cardId);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredCard(null);
-  };
-
   return (
-    <section className="py-20 w-full">
+    <section className="py-20 w-full bg-cyber-bg-elevated/30">
       <div className="w-full px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <Award className="w-5 h-5 text-cyber-accent" />
+          <span className="font-mono text-xs text-cyber-text-muted uppercase tracking-[0.2em]">// certifications</span>
+        </div>
+        <h2 className="text-4xl font-mono font-bold mb-12 text-center cyber-gradient-text">
           Certificates
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {certificates.map((cert) => {
             const isHovered = hoveredCard === cert.id;
-            
             return (
-              <Card 
+              <Card
                 key={cert.id}
-                className={`bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300 relative overflow-hidden ${isHovered ? 'shadow-lg shadow-purple-500/30 scale-105' : ''}`}
-                onMouseEnter={() => handleMouseEnter(cert.id)}
-                onMouseLeave={handleMouseLeave}
+                className={`cyber-card rounded-lg overflow-hidden transition-all duration-300 ${
+                  isHovered ? 'shadow-[0_0_20px_hsl(170,80%,40%,0.15)] border-cyber-border-hover scale-[1.03]' : ''
+                }`}
+                onMouseEnter={() => setHoveredCard(cert.id)}
+                onMouseLeave={() => setHoveredCard(null)}
               >
-                {isHovered && (
-                  <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
-                    <div className="absolute -top-4 -right-4">
-                      <Sparkles className="w-10 h-10 text-purple-400 animate-pulse" />
-                    </div>
-                  </div>
-                )}
-                <CardContent className="p-4 relative z-10">
+                <CardContent className="p-4">
                   <div className="mb-4">
                     <img
                       src={cert.image}
                       alt={cert.title}
-                      className={`w-full h-48 object-cover rounded-lg transition-all duration-300 ${isHovered ? 'scale-105' : ''}`}
+                      className={`w-full h-48 object-cover rounded transition-all duration-300 ${isHovered ? 'scale-[1.03]' : ''}`}
                     />
                   </div>
                   <div className="space-y-2">
-                    <h3 className={`font-semibold transition-colors duration-300 ${isHovered ? 'text-white' : 'text-white/90'}`}>
+                    <h3 className="font-mono font-semibold text-sm text-cyber-text">
                       {cert.title}
                     </h3>
-                    <p className="text-purple-400 text-sm">{cert.issuer}</p>
-                    <p className="text-gray-400 text-sm">{cert.date}</p>
-                    <p className={`text-sm leading-relaxed transition-colors duration-300 ${isHovered ? 'text-gray-200' : 'text-gray-300'}`}>
+                    <p className="text-cyber-accent text-xs font-mono">{cert.issuer}</p>
+                    <p className="text-cyber-text-muted text-xs font-mono">{cert.date}</p>
+                    <p className="text-sm text-cyber-text-muted leading-relaxed">
                       {cert.description}
                     </p>
                   </div>
-                  {isHovered && (
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 w-3/4 animate-pulse"></div>
-                  )}
                 </CardContent>
               </Card>
             );

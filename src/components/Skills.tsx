@@ -1,7 +1,6 @@
-
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
-import { Sparkles } from "lucide-react";
+import { Shield } from "lucide-react";
 
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
@@ -41,65 +40,56 @@ const Skills = () => {
     { name: "Linux", icon: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" },
   ];
 
-  const handleMouseEnter = (skillName: string) => {
-    setHoveredSkill(skillName);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredSkill(null);
-  };
-
   const SkillCard = ({ name, icon }: { name: string; icon: string }) => {
     const isHovered = hoveredSkill === name;
 
     return (
-      <Card 
-        className={`p-4 bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300 relative overflow-hidden ${isHovered ? 'shadow-lg shadow-purple-500/30 scale-105' : ''}`}
-        onMouseEnter={() => handleMouseEnter(name)}
-        onMouseLeave={handleMouseLeave}
+      <Card
+        className={`p-4 cyber-card rounded-lg transition-all duration-300 cursor-default ${
+          isHovered ? 'shadow-[0_0_20px_hsl(170,80%,40%,0.2)] border-cyber-border-hover scale-105' : ''
+        }`}
+        onMouseEnter={() => setHoveredSkill(name)}
+        onMouseLeave={() => setHoveredSkill(null)}
       >
-        {isHovered && (
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10"></div>
-            <div className="absolute -top-4 -right-4">
-              <Sparkles className="w-10 h-10 text-purple-400 animate-pulse" />
-            </div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-purple-600/5 via-pink-500/5 to-purple-400/5 rounded-full animate-pulse"></div>
-          </div>
-        )}
-        <div className="flex flex-col items-center gap-2 relative z-10">
-          <div className={`w-16 h-16 flex items-center justify-center transition-all duration-300 ${isHovered ? 'scale-110' : ''}`}>
+        <div className="flex flex-col items-center gap-3 relative z-10">
+          <div className={`w-14 h-14 flex items-center justify-center transition-all duration-300 ${isHovered ? 'scale-110' : ''}`}>
             <img src={icon} alt={name} className="w-full h-full object-contain" />
           </div>
-          <span className={`text-sm text-center transition-all duration-300 ${isHovered ? 'text-white font-medium' : 'text-gray-300'}`}>
+          <span className={`text-xs font-mono text-center tracking-wide transition-all duration-300 ${
+            isHovered ? 'text-cyber-accent' : 'text-cyber-text-muted'
+          }`}>
             {name}
           </span>
-          {isHovered && (
-            <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 w-3/4 animate-pulse"></div>
-          )}
         </div>
       </Card>
     );
   };
 
   const sections = [
-    { title: "🗡️ Offensive Security", skills: offensiveSecurity },
-    { title: "🛡️ Defensive Security", skills: defensiveSecurity },
-    { title: "💻 Programming & Scripting", skills: programmingScripting },
-    { title: "🌐 Networking & OS", skills: networking },
+    { title: "Offensive Security", icon: "🗡️", skills: offensiveSecurity },
+    { title: "Defensive Security", icon: "🛡️", skills: defensiveSecurity },
+    { title: "Programming & Scripting", icon: "💻", skills: programmingScripting },
+    { title: "Networking & OS", icon: "🌐", skills: networking },
   ];
 
   return (
     <section className="py-20 w-full">
       <div className="w-full px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <Shield className="w-5 h-5 text-cyber-accent" />
+          <span className="font-mono text-xs text-cyber-text-muted uppercase tracking-[0.2em]">// skill_set</span>
+        </div>
+        <h2 className="text-4xl font-mono font-bold mb-12 text-center cyber-gradient-text">
           Cyber Security Skills
         </h2>
-        <div className="space-y-8 max-w-7xl mx-auto">
+        <div className="space-y-10 max-w-7xl mx-auto">
           {sections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-2xl font-semibold mb-4 text-purple-400">{section.title}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <h3 className="text-lg font-mono font-semibold mb-4 cyber-glow-text flex items-center gap-2">
+                <span>{section.icon}</span>
+                {section.title}
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {section.skills.map((skill) => (
                   <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
                 ))}
