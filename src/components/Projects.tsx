@@ -27,18 +27,8 @@ const Projects = () => {
       ],
       githubLink: "https://github.com/aioad/secure-watchtower-hub.git",
       technologies: ["React", "TypeScript", "Supabase", "Network Security"]
-    },
-    {
-      title: "SuperStore Sales Dashboard",
-      image: "/lovable-uploads/92c7d245-7eea-4d86-8812-68c549b68516.png",
-      points: [
-        "Implemented sales trends, profit margins, and region-wise performance visualizations.",
-        "Enabled dynamic filtering and drill-downs to enhance data exploration and clarity.",
-        "Delivered 12% profit drop insights, 8% product gains, and 40% faster reporting."
-      ],
-      githubLink: "https://github.com/meghathakur28/Superstore-report-on-PowerBI",
-      technologies: ["Power BI", "Data Visualization", "Data Analysis"]
     }
+  ];
   ];
 
   return (
