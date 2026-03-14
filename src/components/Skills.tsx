@@ -6,25 +6,39 @@ import { Sparkles } from "lucide-react";
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
-  const languages = [
-    { name: "C", icon: "/lovable-uploads/724947c7-5867-4f5b-836c-307d83d9212f.png" },
-    { name: "C++", icon: "/lovable-uploads/b85a8eba-0af7-448d-b0e2-bf369bf74251.png" },
-    { name: "HTML", icon: "/lovable-uploads/d3c2c7b2-10da-4adf-ae7a-7b7b47857e91.png" },
-    { name: "Python", icon: "/lovable-uploads/9136a116-7e13-48ef-ad1d-12156b5b1677.png" },
-    { name: "CSS", icon: "/lovable-uploads/c001d546-5b7d-46ce-a205-79990981a136.png" }
+  const offensiveSecurity = [
+    { name: "Kali Linux", icon: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" },
+    { name: "Metasploit", icon: "https://www.kali.org/tools/metasploit-framework/images/metasploit-framework-logo.svg" },
+    { name: "Burp Suite", icon: "https://cdn.prod.website-files.com/65a20c289e58e38e78020b5a/65ead9eecfbd5ff3e24a2e3d_PortSwigger-Logo-Black.svg" },
+    { name: "Nmap", icon: "https://nmap.org/images/sitelogo-nmap.svg" },
+    { name: "Wireshark", icon: "https://upload.wikimedia.org/wikipedia/commons/d/df/Wireshark_icon.svg" },
+    { name: "John the Ripper", icon: "https://www.openwall.com/john/Openwall_logo.png" },
+    { name: "Hydra", icon: "https://www.kali.org/tools/hydra/images/hydra-logo.svg" },
+    { name: "Aircrack-ng", icon: "https://www.kali.org/tools/aircrack-ng/images/aircrack-ng-logo.svg" },
   ];
 
-  const tools = [
-    { name: "Windows Terminal", icon: "/lovable-uploads/1ad109a1-4251-45be-8a9c-2661f4153bb5.png" },
-    { name: "Ms-Excel", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/640px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" },
-    { name: "Tableau", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Tableau_Logo.png/640px-Tableau_Logo.png" },
-    { name: "MySQL", icon: "https://www.mysql.com/common/logos/logo-mysql-170x115.png" },
-    { name: "Hadoop", icon: "https://hadoop.apache.org/hadoop-logo.jpg" },
-    { name: "Hbase", icon: "https://hbase.apache.org/images/hbase_logo_with_orca_large.png" },
-    { name: "Figma", icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
-    { name: "Visual Studio", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/640px-Visual_Studio_Code_1.35_icon.svg.png" },
-    { name: "Android Studio", icon: "https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png" },
-    { name: "Eclipse", icon: "https://www.eclipse.org/downloads/assets/public/images/logo-eclipse.png" }
+  const defensiveSecurity = [
+    { name: "Splunk", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Splunk-Logo.jpg" },
+    { name: "Snort", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Snort_ids_logo.png" },
+    { name: "OpenVAS", icon: "https://www.kali.org/tools/openvas-scanner/images/openvas-scanner-logo.svg" },
+    { name: "Nessus", icon: "https://upload.wikimedia.org/wikipedia/commons/4/48/Nessus-Professional-FullColor-RGB.svg" },
+    { name: "pfSense", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b9/PfSense_logo.png" },
+  ];
+
+  const programmingScripting = [
+    { name: "Python", icon: "/lovable-uploads/9136a116-7e13-48ef-ad1d-12156b5b1677.png" },
+    { name: "Bash", icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" },
+    { name: "PowerShell", icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png" },
+    { name: "C", icon: "/lovable-uploads/724947c7-5867-4f5b-836c-307d83d9212f.png" },
+    { name: "SQL", icon: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" },
+  ];
+
+  const networking = [
+    { name: "TCP/IP", icon: "https://cdn-icons-png.flaticon.com/512/1239/1239682.png" },
+    { name: "DNS", icon: "https://cdn-icons-png.flaticon.com/512/8297/8297437.png" },
+    { name: "VPN", icon: "https://cdn-icons-png.flaticon.com/512/6195/6195699.png" },
+    { name: "Firewall", icon: "https://cdn-icons-png.flaticon.com/512/2716/2716612.png" },
+    { name: "Linux", icon: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" },
   ];
 
   const handleMouseEnter = (skillName: string) => {
@@ -35,12 +49,11 @@ const Skills = () => {
     setHoveredSkill(null);
   };
 
-  const SkillCard = ({ name, icon, type }: { name: string; icon: string; type: string }) => {
+  const SkillCard = ({ name, icon }: { name: string; icon: string }) => {
     const isHovered = hoveredSkill === name;
 
     return (
       <Card 
-        key={name} 
         className={`p-4 bg-[#2A2F3C] border-purple-500/30 hover:border-purple-500 transition-all duration-300 relative overflow-hidden ${isHovered ? 'shadow-lg shadow-purple-500/30 scale-105' : ''}`}
         onMouseEnter={() => handleMouseEnter(name)}
         onMouseLeave={handleMouseLeave}
@@ -58,7 +71,7 @@ const Skills = () => {
           <div className={`w-16 h-16 flex items-center justify-center transition-all duration-300 ${isHovered ? 'scale-110' : ''}`}>
             <img src={icon} alt={name} className="w-full h-full object-contain" />
           </div>
-          <span className={`transition-all duration-300 ${isHovered ? 'text-white font-medium' : 'text-gray-300'}`}>
+          <span className={`text-sm text-center transition-all duration-300 ${isHovered ? 'text-white font-medium' : 'text-gray-300'}`}>
             {name}
           </span>
           {isHovered && (
@@ -69,29 +82,30 @@ const Skills = () => {
     );
   };
 
+  const sections = [
+    { title: "🗡️ Offensive Security", skills: offensiveSecurity },
+    { title: "🛡️ Defensive Security", skills: defensiveSecurity },
+    { title: "💻 Programming & Scripting", skills: programmingScripting },
+    { title: "🌐 Networking & OS", skills: networking },
+  ];
+
   return (
     <section className="py-20 w-full">
       <div className="w-full px-6">
         <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Skills
+          Cyber Security Skills
         </h2>
         <div className="space-y-8 max-w-7xl mx-auto">
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-purple-400">Languages</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {languages.map((lang) => (
-                <SkillCard key={lang.name} name={lang.name} icon={lang.icon} type="language" />
-              ))}
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-2xl font-semibold mb-4 text-purple-400">{section.title}</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                {section.skills.map((skill) => (
+                  <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-purple-400">Tools & Platforms</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {tools.map((tool) => (
-                <SkillCard key={tool.name} name={tool.name} icon={tool.icon} type="tool" />
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
