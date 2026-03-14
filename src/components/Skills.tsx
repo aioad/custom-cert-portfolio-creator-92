@@ -12,7 +12,7 @@ const Skills = () => {
     { name: "Burp Suite", icon: "/logos/burpsuite.png" },
     { name: "Nmap", icon: "https://nmap.org/images/sitelogo-nmap.svg" },
     { name: "Wireshark", icon: "https://upload.wikimedia.org/wikipedia/commons/d/df/Wireshark_icon.svg" },
-    { name: "John the Ripper", icon: "https://www.openwall.com/john/Openwall_logo.png" },
+    { name: "John the Ripper", icon: "/logos/john-the-ripper.png" },
     { name: "Hydra", icon: "https://www.kali.org/tools/hydra/images/hydra-logo.svg" },
     { name: "Aircrack-ng", icon: "https://www.kali.org/tools/aircrack-ng/images/aircrack-ng-logo.svg" },
   ];
