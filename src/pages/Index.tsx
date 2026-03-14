@@ -8,7 +8,7 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Training from "@/components/Training";
 import { FileText, User, Briefcase, School, Mail, Linkedin, Award, Star, Heart, Shield, Terminal } from "lucide-react";
-import VideoCV from "@/components/VideoCV";
+
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -85,7 +85,7 @@ const Index = () => {
       <div id="skills"><Skills /></div>
       <div id="projects"><Projects /></div>
       <div id="certificates"><Certificates /></div>
-      <VideoCV />
+      
 
       {/* Education & Training */}
       <section id="education-training" className="py-16 bg-cyber-bg-elevated/50 overflow-hidden w-full">
