@@ -8,7 +8,7 @@ const Projects = () => {
   const projectsData = [
     {
       title: "NetHawk - AI-Powered Network Security System",
-      image: "/lovable-uploads/1c911df6-335f-493c-b2b1-2a8fddf877a6.png",
+      image: "/lovable-uploads/nethawk-dashboard.png",
       points: [
         "Real-time Network Monitoring with live packet analysis.",
         "AI-Powered Threat Detection using machine learning algorithms.",
