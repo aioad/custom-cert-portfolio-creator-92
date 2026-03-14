@@ -9,7 +9,7 @@ const Skills = () => {
   const offensiveSecurity = [
     { name: "Kali Linux", icon: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" },
     { name: "Metasploit", icon: "https://www.kali.org/tools/metasploit-framework/images/metasploit-framework-logo.svg" },
-    { name: "Burp Suite", icon: "https://cdn.prod.website-files.com/65a20c289e58e38e78020b5a/65ead9eecfbd5ff3e24a2e3d_PortSwigger-Logo-Black.svg" },
+    { name: "Burp Suite", icon: "/logos/burpsuite.png" },
     { name: "Nmap", icon: "https://nmap.org/images/sitelogo-nmap.svg" },
     { name: "Wireshark", icon: "https://upload.wikimedia.org/wikipedia/commons/d/df/Wireshark_icon.svg" },
     { name: "John the Ripper", icon: "https://www.openwall.com/john/Openwall_logo.png" },
