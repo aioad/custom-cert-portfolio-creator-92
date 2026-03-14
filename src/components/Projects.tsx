@@ -29,7 +29,6 @@ const Projects = () => {
       technologies: ["React", "TypeScript", "Supabase", "Network Security"]
     }
   ];
-  ];
 
   return (
     <section className="py-20 w-full">
