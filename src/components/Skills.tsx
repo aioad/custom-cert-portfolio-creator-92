@@ -20,7 +20,7 @@ const Skills = () => {
   const defensiveSecurity = [
     { name: "Splunk", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Splunk-Logo.jpg" },
     { name: "Snort", icon: "/logos/snort.png" },
-    { name: "OpenVAS", icon: "https://www.kali.org/tools/openvas-scanner/images/openvas-scanner-logo.svg" },
+    { name: "OpenVAS", icon: "/logos/openvas.png" },
     { name: "Nessus", icon: "https://upload.wikimedia.org/wikipedia/commons/4/48/Nessus-Professional-FullColor-RGB.svg" },
     { name: "pfSense", icon: "https://upload.wikimedia.org/wikipedia/commons/b/b9/PfSense_logo.png" },
   ];
